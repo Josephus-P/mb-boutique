@@ -6,7 +6,9 @@ import Layout from '../components/layout';
 
 const Microblading = () => (
   <Layout>
-    <Helmet title="What is Microblading? | Microblading Boutique" />
+    <Helmet title="What is Microblading? | Microblading Boutique">
+      <html lang="en" />
+    </Helmet>
     <h1>Hi from the Microblading page</h1>
     <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>

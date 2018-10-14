@@ -6,9 +6,11 @@ import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import '../index.scss';
 
-const IndexPage = props => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <Helmet title="Microblading Services | Microblading Boutique" />
+    <Helmet title="Microblading Services | Microblading Boutique">
+      <html lang="en" />
+    </Helmet>
     <Jumbotron fluid>
       <Container>
         <Row>
@@ -18,7 +20,7 @@ const IndexPage = props => (
           <Col xs="12">
             <h1>Changing the World One Brow at a Time</h1>
           </Col>
-          <Col xs="6" className="btn-col">
+          <Col xs="12" sm="6" className="btn-col">
             <Link to="/appointment">
               <button aria-label="schedule-appointment">
                 Book your Appointment!
@@ -46,7 +48,7 @@ const IndexPage = props => (
           </Link>
         </Col>
         <Col className="about-mb-img-col" lg={{ size: 5, offset: 1 }}>
-          <Img fluid={props.data.imageOne.childImageSharp.fluid} />
+          <Img fluid={data.mbHome.childImageSharp.fluid} />
         </Col>
       </Row>
     </Container>
@@ -70,14 +72,23 @@ const IndexPage = props => (
 
 export default IndexPage;
 
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`;
+
 export const pageQuery = graphql`
   query {
-    imageOne: file(relativePath: { eq: "microblading-home.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+    mbJumbo: file(relativePath: { eq: "eyebrows_jumbotron.png" }) {
+      ...fluidImage
+    }
+    mbHome: file(relativePath: { eq: "microblading-home.jpg" }) {
+      ...fluidImage
     }
   }
 `;

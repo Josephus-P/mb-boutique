@@ -1,11 +1,25 @@
+/********** JUMBOTRON SECTION **********/
+
 .jumbotron-fluid {
   margin: 0;
   padding: 0;
-  background: url(./images/eyebrows_jumbotron.jpg);
+  background: url(./images/eyebrows_jumbotron_sm.jpg);
+  background-size: 640px;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
-  min-height: 600px;
+  min-height: 45vh;
+
+  @media (min-width: 575px) {
+    background-size: contain;
+  }
+
+  @media (min-width: 576px) {
+    background: url(./images/eyebrows_jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 60vh;
+  }
 
   .jumbo-row {
     display: flex;
@@ -14,31 +28,46 @@
     h1 {
       color: #fff;
       font-family: 'Playfair Display';
-      font-size: 3.5rem;
-      line-height: 1.25;
+      font-size: 2rem;
+      line-height: 1.5;
       text-align: center;
-      margin: 100px auto 75px auto;
-      width: 50%;
+      margin: 50px auto 25px auto;
+      width: 100%;
 
-      @media (min-width: 993px) {
+      @media (min-width: 575px) {
+        font-size: 2.5rem;
+        line-height: 1.5;
+        margin: 50px auto 75px auto;
+      }
+      @media (min-width: 767px) {
         font-size: 4rem;
         line-height: 1.5;
+        width: 50%;
+        margin: 100px auto 75px auto;
       }
     }
 
     .btn-col {
       display: flex;
       justify-content: center;
+      width: 100%;
 
       button {
         border: 1px solid;
         background-color: #00ad9f99;
         color: #fff;
-        padding: 15px;
         font-family: 'Poppins';
-        font-size: 1.5rem;
+        font-size: 1rem;
+        margin-bottom: 0;
+        width: 100%;
+        padding: 10px;
         transition: 0.3s;
-        margin-bottom: 50px;
+
+        @media (min-width: 576px) {
+          font-size: 1.5rem;
+          margin-bottom: 50px;
+          padding: 15px;
+        }
 
         @media (min-width: 993px) {
           margin-bottom: 0px;
@@ -54,11 +83,17 @@
   }
 }
 
+/********** ABOUT MICROBLADING SUMMARY SECTION **********/
+
 .about-mb {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 25px;
   font-family: 'Display Playfair';
 
+  @media (min-width: 576px) {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
   .about-mb-desc {
     display: flex;
     flex-flow: row wrap;
@@ -67,6 +102,7 @@
 
     h2 {
       margin-bottom: 50px;
+      text-align: center;
     }
     p {
       line-height: 2;
