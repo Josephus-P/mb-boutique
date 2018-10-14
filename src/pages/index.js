@@ -76,25 +76,27 @@ const IndexPage = ({ data }) => (
         </Col>
       </Row>
     </Container>
-    <Container className="meet-monica">
-      <Row>
-        <Col xs="12" md="6">
-          <Img fluid={data.monica.childImageSharp.fluid} />
-        </Col>
-        <Col xs="12" md="6">
-          <h2>Meet Monica</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-            repellat possimus, excepturi harum aliquid perspiciatis impedit
-            rerum, molestiae, atque accusantium iure esse neque quis consequatur
-            placeat cumque tenetur ducimus libero?Fugiat, ea quae! Voluptates
-            assumenda consectetur unde blanditiis quia id nesciunt facilis nihil
-            voluptatem necessitatibus modi expedita maiores, ratione recusandae
-            autem dolore veritatis aperiam cumque, eos inventore. Iure, incidunt
-            facilis.
-          </p>
-        </Col>
-      </Row>
+    <Container className="meet-monica" fluid>
+      <Container className="monica-ctn">
+        <Row>
+          <Col xs="12" md="6">
+            <Img fluid={data.monica.childImageSharp.fluid} />
+          </Col>
+          <Col xs="12" md="6">
+            <h2>Meet Monica</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis repellat possimus, excepturi harum aliquid perspiciatis
+              impedit rerum, molestiae, atque accusantium iure esse neque quis
+              consequatur placeat cumque tenetur ducimus libero?Fugiat, ea quae!
+              Voluptates assumenda consectetur unde blanditiis quia id nesciunt
+              facilis nihil voluptatem necessitatibus modi expedita maiores,
+              ratione recusandae autem dolore veritatis aperiam cumque, eos
+              inventore. Iure, incidunt facilis.
+            </p>
+          </Col>
+        </Row>
+      </Container>
     </Container>
     <Container className="testimonials">
       <Row>
