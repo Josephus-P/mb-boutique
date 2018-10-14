@@ -28,7 +28,7 @@ export default class Footer extends React.Component {
                 target="_blank"
                 rel="noopener"
               >
-                <Icon size={'20'} icon={socialFacebook} />
+                <Icon size={'22'} icon={socialFacebook} />
               </NavLink>
               <NavLink
                 aria-label="instagram-link"
@@ -36,7 +36,7 @@ export default class Footer extends React.Component {
                 target="_blank"
                 rel="noopener"
               >
-                <Icon size={'20'} icon={socialInstagram} />
+                <Icon size={'22'} icon={socialInstagram} />
               </NavLink>
               <NavLink
                 aria-label="twitter-link"
@@ -44,7 +44,7 @@ export default class Footer extends React.Component {
                 target="_blank"
                 rel="noopener"
               >
-                <Icon size={'20'} icon={socialTwitter} />
+                <Icon size={'22'} icon={socialTwitter} />
               </NavLink>
             </Col>
             <Col xs="12">

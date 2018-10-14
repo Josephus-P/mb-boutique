@@ -70,7 +70,7 @@ export default class MBNavbar extends React.Component {
                 rel="noopener"
                 className="d-inline"
               >
-                <Icon size={'25'} icon={socialFacebook} />
+                <Icon size={'26'} icon={socialFacebook} />
               </NavLink>
             </NavItem>
             <NavItem className="mx-auto">
@@ -80,7 +80,7 @@ export default class MBNavbar extends React.Component {
                 rel="noopener"
                 className="d-inline"
               >
-                <Icon size={'25'} icon={socialInstagram} />
+                <Icon size={'26'} icon={socialInstagram} />
               </NavLink>
             </NavItem>
             <NavItem className="mx-auto">
@@ -90,7 +90,7 @@ export default class MBNavbar extends React.Component {
                 rel="noopener"
                 className="d-inline"
               >
-                <Icon size={'25'} icon={socialTwitter} />
+                <Icon size={'26'} icon={socialTwitter} />
               </NavLink>
             </NavItem>
           </Nav>

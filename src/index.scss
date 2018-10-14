@@ -7,7 +7,7 @@
   background-size: 640px;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 45vh;
+  min-height: 30vh;
 
   @media (min-width: 575px) {
     background-size: contain;
@@ -88,7 +88,7 @@
 .about-mb {
   margin-top: 50px;
   margin-bottom: 25px;
-  font-family: 'Display Playfair';
+  font-family: 'Playfair Display';
 
   @media (min-width: 576px) {
     margin-top: 100px;
@@ -99,11 +99,12 @@
     flex-flow: row wrap;
     justify-content: center;
     margin-bottom: 50px;
+    text-align: center;
 
     h2 {
       margin-bottom: 50px;
-      text-align: center;
     }
+
     p {
       line-height: 2;
     }
@@ -129,5 +130,32 @@
         color: #00ad9f99;
       }
     }
+  }
+}
+
+/********** SHOP INFO SECTION **********/
+
+.shop-info {
+  @media (min-width: 576px) {
+    margin-bottom: 100px;
+  }
+}
+
+/********** MEET MONICA SECTION **********/
+
+.meet-monica {
+  @media (min-width: 576px) {
+    margin-bottom: 100px;
+  }
+}
+
+/********** TESTIMONIALS SECTION **********/
+
+.testimonials {
+  h2 {
+    text-align: center;
+  }
+  @media (min-width: 576px) {
+    margin-bottom: 100px;
   }
 }

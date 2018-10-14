@@ -11567,6 +11567,26 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-cormorant-sc@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-cormorant-sc/-/typeface-cormorant-sc-0.0.54.tgz#97cfe68c3c6506c9bfa0f2d1ec0ee846aaf2c343"
+  integrity sha512-pWRHsgNBqaynzzcR1jBifr3NfEPwDRSR8ZcPBBU+9l38wG2429FqOMyvvTrEWBSeBjeosIe2P94jwM35g5Y4yQ==
+
+typeface-milonga@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-milonga/-/typeface-milonga-0.0.54.tgz#dbaeae6b0770e0e9f42efb8918e946d30ae19ac5"
+  integrity sha512-6xGRVQ7QZlN3Y1N9k44NH9QmEv4+75hRyR6uCYlwBkhFYbPXgw8bbHOvmFlSdGtXn9rH64wJdQr98LVQ1uT+1w==
+
+typeface-playfair-display@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-playfair-display/-/typeface-playfair-display-0.0.54.tgz#32a210d27e8dcbfbd6eebd63108af26d115838a0"
+  integrity sha512-geSEULjSeJrysLvneiH/Czq2FNXeRCUJCv81UmFmi6xQ4okYUpAOP7y4OLsKC2+4ewHQTEMxPUf+zeIko2v5YQ==
+
+typeface-poppins@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-poppins/-/typeface-poppins-0.0.54.tgz#58c90da107a14db1e359f4d339cb2cc8e098d37b"
+  integrity sha512-VQyXtQJdr4jxHIyZWR6SkBjkqf5opHF4cx5C7A48mfL60ahYLN2fGtsN9qAgJ6YyRvOLpDn64czfn+/tWwSE/g==
+
 ua-parser-js@^0.7.18:
   version "0.7.18"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.18.tgz#a7bfd92f56edfb117083b69e31d2aa8882d4b1ed"
