@@ -37,7 +37,7 @@ export default class MBNavbar extends React.Component {
       <div>
         <Navbar color="light" light expand="lg">
           <NavbarBrand href="/">Microblading Boutique</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarToggler onClick={this.toggle} aria-label="menu-button" />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mx-auto" navbar>
               <NavItem className="py-2">
@@ -67,6 +67,7 @@ export default class MBNavbar extends React.Component {
               <NavLink
                 href="https://facebook.com"
                 target="_blank"
+                rel="noopener"
                 className="d-inline"
               >
                 <Icon size={'25'} icon={socialFacebook} />
@@ -76,6 +77,7 @@ export default class MBNavbar extends React.Component {
               <NavLink
                 href="https://instagram.com"
                 target="_blank"
+                rel="noopener"
                 className="d-inline"
               >
                 <Icon size={'25'} icon={socialInstagram} />
@@ -85,6 +87,7 @@ export default class MBNavbar extends React.Component {
               <NavLink
                 href="https://twitter.com"
                 target="_blank"
+                rel="noopener"
                 className="d-inline"
               >
                 <Icon size={'25'} icon={socialTwitter} />

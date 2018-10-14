@@ -22,13 +22,28 @@ export default class Footer extends React.Component {
         <Container className="footer-ctn">
           <Row>
             <Col>
-              <NavLink href="https://facebook.com" target="_blank">
+              <NavLink
+                aria-label="facebook-link"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener"
+              >
                 <Icon size={'20'} icon={socialFacebook} />
               </NavLink>
-              <NavLink href="https://instagram.com" target="_blank">
+              <NavLink
+                aria-label="instagram-link"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+              >
                 <Icon size={'20'} icon={socialInstagram} />
               </NavLink>
-              <NavLink href="https://twitter.com" target="_blank">
+              <NavLink
+                aria-label="twitter-link"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener"
+              >
                 <Icon size={'20'} icon={socialTwitter} />
               </NavLink>
             </Col>
@@ -36,7 +51,10 @@ export default class Footer extends React.Component {
               <p>
                 Copyright &copy;
                 {this.state.year} All rights reserved | Website designed and
-                built by <a href="http://josephusdev.com">JosephusDev</a>
+                built by{' '}
+                <a href="http://josephusdev.com" rel="noopener">
+                  JosephusDev
+                </a>
               </p>
             </Col>
           </Row>
