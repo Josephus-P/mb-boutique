@@ -40,24 +40,16 @@ export default class MBNavbar extends React.Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mx-auto" navbar>
             <NavItem className="py-2">
-              <Link className="" to="/">
-                Home
-              </Link>
+              <Link to="/">Home</Link>
             </NavItem>
             <NavItem className="py-2">
-              <Link className="" to="/microblading">
-                What is Microblading?
-              </Link>
+              <Link to="/microblading">What is Microblading?</Link>
             </NavItem>
             <NavItem className="py-2">
-              <Link className="" to="/appointment">
-                Book an Appointment
-              </Link>
+              <Link to="/appointment">Book an Appointment</Link>
             </NavItem>
             <NavItem className="py-2">
-              <Link className="" to="/questions">
-                Questions?
-              </Link>
+              <Link to="/questions">Questions?</Link>
             </NavItem>
           </Nav>
         </Collapse>

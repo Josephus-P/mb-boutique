@@ -1,9 +1,4 @@
-body {
-  font-family: 'Playfair Display';
-}
-
 /********** JUMBOTRON SECTION **********/
-
 .jumbotron-fluid {
   margin-top: 25px;
   padding: 0;
@@ -14,7 +9,7 @@ body {
   min-height: 30vh;
 
   @media (min-width: 575px) {
-    margin: 0;
+    margin-top: 50px;
     background-size: contain;
   }
 
@@ -31,10 +26,11 @@ body {
     justify-content: center;
 
     h1 {
-      color: #fff;
+      font-family: 'Playfair Display';
       font-size: 2rem;
       line-height: 1.5;
       text-align: center;
+      color: #fff;
       margin: 50px auto 25px auto;
       width: 100%;
 
@@ -101,6 +97,7 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     margin-bottom: 50px;
+    font-family: 'Playfair Display';
     text-align: center;
 
     h2 {
@@ -139,6 +136,7 @@ body {
 /********** SHOP INFO SECTION **********/
 
 .shop-info-fluid {
+  font-family: 'Playfair Display';
   background-color: #f4f6f4;
   @media (min-width: 576px) {
     margin-bottom: 50px;
@@ -249,6 +247,7 @@ body {
 /********** MEET MONICA SECTION **********/
 
 .meet-monica {
+  font-family: 'Playfair Display';
   margin-top: 50px;
 
   @media (min-width: 767px) {
@@ -282,6 +281,7 @@ body {
 /********** TESTIMONIALS SECTION **********/
 
 .testimonials {
+  font-family: 'Playfair Display';
   margin-top: 25px;
   margin-bottom: 50px;
   @media (min-width: 767px) {
