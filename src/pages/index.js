@@ -16,7 +16,6 @@ import 'typeface-poppins';
 import 'typeface-milonga';
 import '../index.scss';
 
-const items = [];
 const IndexPage = ({ data }) => (
   <Layout>
     <Helmet title="Microblading Services | Microblading Boutique">
@@ -101,7 +100,7 @@ const IndexPage = ({ data }) => (
                 aria-label="facebook-link"
                 href="https://facebook.com"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <Icon size={'40'} icon={socialFacebook} />
               </a>
@@ -109,7 +108,7 @@ const IndexPage = ({ data }) => (
                 aria-label="instagram-link"
                 href="https://instagram.com"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <Icon size={'40'} icon={socialInstagram} />
               </a>
@@ -117,7 +116,7 @@ const IndexPage = ({ data }) => (
                 aria-label="twitter-link"
                 href="https://twitter.com"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <Icon size={'40'} icon={socialTwitter} />
               </a>
