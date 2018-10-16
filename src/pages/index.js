@@ -4,12 +4,19 @@ import Layout from '../components/layout';
 import { Jumbotron, Container, Row, Col } from 'reactstrap';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import Icon from 'react-icons-kit';
+import {
+  socialInstagram,
+  socialFacebook,
+  socialTwitter
+} from 'react-icons-kit/typicons';
+import MBCarousel from '../components/mbcarousel';
 import 'typeface-playfair-display';
 import 'typeface-poppins';
-import 'typeface-cormorant-sc';
 import 'typeface-milonga';
 import '../index.scss';
 
+const items = [];
 const IndexPage = ({ data }) => (
   <Layout>
     <Helmet title="Microblading Services | Microblading Boutique">
@@ -56,33 +63,76 @@ const IndexPage = ({ data }) => (
         </Col>
       </Row>
     </Container>
-    <Container className="shop-info">
-      <Row>
-        <Col xs="12" md="4">
-          <h2>Shop Info</h2>
-          <p>Hours: </p>
-          <p>Address: </p>
-          <p>tel-phone: </p>
-        </Col>
-        <Col xs="12" md="4">
-          <Img fluid={data.storefront.childImageSharp.fluid} />
-        </Col>
-        <Col xs="12" md="4">
-          <Link to="/appointment">
-            <button aria-label="schedule-appointment">
-              Book your Appointment!
-            </button>
-          </Link>
-        </Col>
-      </Row>
+    <Container className="shop-info-fluid" fluid>
+      <Container className="shop-info">
+        <Row>
+          <Col className="info-col" xs="12" md="4">
+            <h2>Shop Info</h2>
+            <p>
+              <strong>Hours</strong>:<br /> Varies (By Appointment Only)
+            </p>
+            <span>
+              <strong>Address</strong>:<br />
+            </span>
+            <addres>
+              <a href="https://goo.gl/maps/W24CMHiKQYS2" rel="noopener">
+                4550 W 95th St.
+                <br /> OakLawn, IL 60453
+              </a>
+            </addres>
+            <p>
+              <br />
+              <strong>Tel-Phone</strong>:{' '}
+              <a href="tel:+9999999999">999-999-9999</a>
+            </p>
+          </Col>
+          <Col className="info-img-col" xs="12" md="4 ">
+            <Img fluid={data.storefront.childImageSharp.fluid} />
+          </Col>
+          <Col className="info-btn-col" xs="12" md="4">
+            <Link to="/appointment">
+              <button aria-label="schedule-appointment">
+                Book your Appointment!
+              </button>
+            </Link>
+            <h2>Find Us On</h2>
+            <div className="info-icons">
+              <a
+                aria-label="facebook-link"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener"
+              >
+                <Icon size={'40'} icon={socialFacebook} />
+              </a>
+              <a
+                aria-label="instagram-link"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+              >
+                <Icon size={'40'} icon={socialInstagram} />
+              </a>
+              <a
+                aria-label="twitter-link"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener"
+              >
+                <Icon size={'40'} icon={socialTwitter} />
+              </a>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </Container>
     <Container className="meet-monica" fluid>
-      <Container className="monica-ctn">
+      <Container>
         <Row>
           <Col xs="12" md="6">
             <Img fluid={data.monica.childImageSharp.fluid} />
           </Col>
-          <Col xs="12" md="6">
+          <Col className="monica-about" xs="12" md="6">
             <h2>Meet Monica</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -100,8 +150,11 @@ const IndexPage = ({ data }) => (
     </Container>
     <Container className="testimonials">
       <Row>
-        <Col>
+        <Col xs="12">
           <h2>Testimonials</h2>
+        </Col>
+        <Col xs="12" md="8" className="offset-md-2">
+          <MBCarousel />
         </Col>
       </Row>
     </Container>

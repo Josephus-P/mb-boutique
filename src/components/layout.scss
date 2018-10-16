@@ -1,3 +1,7 @@
+body {
+  font-family: 'Playfair Display';
+}
+
 .navbar-brand {
   font-family: 'Milonga';
   color: #00ad9f99 !important;
@@ -19,6 +23,7 @@
   display: flex;
   align-items: center;
   width: 70%;
+  font-family: 'Poppins';
 
   .nav-item {
     @media (min-width: 992px) {
