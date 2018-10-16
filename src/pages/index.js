@@ -74,12 +74,12 @@ const IndexPage = ({ data }) => (
             <span>
               <strong>Address</strong>:<br />
             </span>
-            <addres>
+            <address>
               <a href="https://goo.gl/maps/W24CMHiKQYS2" rel="noopener">
                 4550 W 95th St.
                 <br /> OakLawn, IL 60453
               </a>
-            </addres>
+            </address>
             <p>
               <br />
               <strong>Tel-Phone</strong>:{' '}

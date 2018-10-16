@@ -1,7 +1,7 @@
 /********** JUMBOTRON SECTION **********/
 
 .jumbotron-fluid {
-  margin: 0;
+  margin-top: 25px;
   padding: 0;
   background: url(./images/eyebrows_jumbotron_sm.jpg);
   background-size: 640px;
@@ -10,6 +10,7 @@
   min-height: 30vh;
 
   @media (min-width: 575px) {
+    margin: 0;
     background-size: contain;
   }
 
@@ -245,6 +246,7 @@
 
 .meet-monica {
   margin-top: 50px;
+
   @media (min-width: 767px) {
     margin-top: 100px;
     margin-bottom: 100px;

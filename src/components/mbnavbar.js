@@ -34,7 +34,7 @@ export default class MBNavbar extends React.Component {
 
   render() {
     return (
-      <Navbar color="light" light expand="lg">
+      <Navbar className="fixed-top" color="light" light expand="lg">
         <NavbarBrand href="/">Microblading Boutique</NavbarBrand>
         <NavbarToggler onClick={this.toggle} aria-label="menu-button" />
         <Collapse isOpen={this.state.isOpen} navbar>
