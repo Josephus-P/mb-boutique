@@ -1,18 +1,34 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import '../appointments.scss';
 
-const Apppointments = () => (
-  <Layout>
-    <Helmet title="Book a Microblading Appointment | Microblading Boutique">
-      <html lang="en" />
-    </Helmet>
-    <h1>Hi from the Apppointments page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-);
+export default class Apppointments extends React.Component {
+  constructor() {
+    super();
+  }
+  componentDidMount() {
+    const script = document.createElement('script');
 
-export default Apppointments;
+    script.src =
+      'https://squareup.com/appointments/buyer/widget/74e9a273-56c7-4735-a2d4-bd3ae65dd244/5CERAD4DFWQXJ.js';
+    script.async = false;
+    console.log(document.body.childNodes[0].firstChild);
+    document.body.insertBefore(script, document.body.firstChild);
+  }
+
+  shouldComponentUpdate() {
+    return false;
+  }
+
+  render() {
+    return (
+      <Layout>
+        <Helmet title="Book a Microblading Appointment | Microblading Boutique">
+          <html lang="en" />
+        </Helmet>
+      </Layout>
+    );
+  }
+}

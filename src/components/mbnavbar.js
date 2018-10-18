@@ -25,6 +25,13 @@ export default class MBNavbar extends React.Component {
       isOpen: false
     };
   }
+  removeIframe = () => {
+    console.log('Success');
+    let element = document.getElementsByTagName('IFRAME');
+    console.log(element);
+    if (element != null && element.length > 0)
+      element.parentNode.removeChild(element);
+  };
 
   toggle() {
     this.setState({
@@ -40,16 +47,22 @@ export default class MBNavbar extends React.Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mx-auto" navbar>
             <NavItem className="py-2">
-              <Link to="/">Home</Link>
+              <Link onClick={this.removeIframe} to="/">
+                Home
+              </Link>
             </NavItem>
             <NavItem className="py-2">
-              <Link to="/microblading">What is Microblading?</Link>
+              <Link onClick={this.removeIframe} to="/microblading">
+                What is Microblading?
+              </Link>
             </NavItem>
             <NavItem className="py-2">
               <Link to="/appointment">Book an Appointment</Link>
             </NavItem>
             <NavItem className="py-2">
-              <Link to="/questions">Questions?</Link>
+              <Link onClick={this.removeIframe} to="/questions">
+                Questions?
+              </Link>
             </NavItem>
           </Nav>
         </Collapse>
