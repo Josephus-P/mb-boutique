@@ -25,10 +25,10 @@ export default class MBNavbar extends React.Component {
       isOpen: false
     };
   }
+
   removeIframe = () => {
-    console.log('Success');
     let element = document.getElementsByTagName('IFRAME');
-    console.log(element);
+
     if (element != null && element.length > 0)
       element.parentNode.removeChild(element);
   };
