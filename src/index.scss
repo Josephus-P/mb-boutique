@@ -138,6 +138,18 @@
 .shop-info-fluid {
   font-family: 'Playfair Display';
   background-color: #f4f6f4;
+
+  h2 {
+    text-align: center;
+  }
+
+  .card-header {
+    background-color: #00ad9f99;
+    color: white;
+  }
+  .card {
+    height: 100%;
+  }
   @media (min-width: 576px) {
     margin-bottom: 50px;
   }
@@ -149,15 +161,6 @@
     @media (min-width: 767px) {
       margin-top: 100px;
       margin-bottom: 100px;
-    }
-
-    h2 {
-      margin-bottom: 25px;
-      text-align: left;
-
-      @media (min-width: 767px) {
-        margin-bottom: 50px;
-      }
     }
 
     a {
@@ -182,10 +185,6 @@
   }
 
   .info-btn-col {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
     margin-top: 25px;
     margin-bottom: 50px;
 
@@ -194,12 +193,35 @@
       margin-bottom: 100px;
     }
 
-    a {
-      width: 100%;
+    .card-body {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
 
-      @media (min-width: 767px) {
-        width: 50%;
+      .info-icons {
+        display: flex;
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 50px;
+        text-align: center;
+
+        @media (min-width: 767px) {
+          margin-bottom: 50px;
+        }
+        a {
+          width: 100%;
+          color: black;
+          @media (min-width: 767px) {
+            width: 50%;
+          }
+
+          &:hover {
+            color: #00ad9f99;
+          }
+        }
       }
+
       button {
         border: 1px solid;
         background-color: #00ad9f99;
@@ -214,29 +236,6 @@
         &:hover {
           cursor: pointer;
           background-color: #fff;
-          color: #00ad9f99;
-        }
-      }
-    }
-
-    h2 {
-      width: 100%;
-      text-align: center;
-      @media (max-width: 766px) {
-        margin-top: 50px;
-        margin-bottom: 50px;
-      }
-    }
-
-    .info-icons {
-      display: flex;
-      width: 100%;
-
-      a {
-        text-align: center;
-        color: black;
-
-        &:hover {
           color: #00ad9f99;
         }
       }

@@ -1,7 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
-import { Jumbotron, Container, Row, Col } from 'reactstrap';
+import {
+  Jumbotron,
+  Container,
+  Row,
+  Col,
+  Card,
+  CardHeader,
+  CardBody,
+  CardTitle,
+  CardText
+} from 'reactstrap';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Icon from 'react-icons-kit';
@@ -18,8 +28,12 @@ import '../index.scss';
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Helmet title="Microblading Services | Microblading Boutique">
+    <Helmet title="Oak Lawn Microblading Services | Microblading Boutique">
       <html lang="en" />
+      <meta
+        name="description"
+        content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
+      />
     </Helmet>
     <Jumbotron fluid>
       <Container>
@@ -66,61 +80,76 @@ const IndexPage = ({ data }) => (
       <Container className="shop-info">
         <Row>
           <Col className="info-col" xs="12" md="4">
-            <h2>Shop Info</h2>
-            <p>
-              <strong>Hours</strong>:<br /> Varies (By Appointment Only)
-            </p>
-            <span>
-              <strong>Address</strong>:<br />
-            </span>
-            <address>
-              <a href="https://goo.gl/maps/W24CMHiKQYS2" rel="noopener">
-                4550 W 95th St.
-                <br /> OakLawn, IL 60453
-              </a>
-            </address>
-            <p>
-              <br />
-              <strong>Tel-Phone</strong>:{' '}
-              <a href="tel:+9999999999">999-999-9999</a>
-            </p>
+            <Card>
+              <CardHeader>
+                <h2>Salon Info</h2>
+              </CardHeader>
+              <CardBody>
+                <CardText>
+                  <p>
+                    <strong>Hours</strong>:<br /> Varies (By Appointment Only)
+                  </p>
+                  <span>
+                    <strong>Address</strong>:<br />
+                  </span>
+                  <address>
+                    <a href="https://goo.gl/maps/W24CMHiKQYS2" rel="noopener">
+                      4550 W 95th St.
+                      <br /> Oak Lawn, IL 60453
+                    </a>
+                  </address>
+                  <p>
+                    <strong>Tel-Phone</strong>:{' '}
+                    <a href="tel:+9999999999">999-999-9999</a>
+                  </p>
+                </CardText>
+              </CardBody>
+            </Card>
           </Col>
-          <Col className="info-img-col" xs="12" md="4 ">
+          <Col className="info-img-col my-auto" xs="12" md="4">
             <Img fluid={data.storefront.childImageSharp.fluid} />
           </Col>
           <Col className="info-btn-col" xs="12" md="4">
-            <Link to="/appointment">
-              <button aria-label="schedule-appointment">
-                Book your Appointment!
-              </button>
-            </Link>
-            <h2>Find Us On</h2>
-            <div className="info-icons">
-              <a
-                aria-label="facebook-link"
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon size={'40'} icon={socialFacebook} />
-              </a>
-              <a
-                aria-label="instagram-link"
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon size={'40'} icon={socialInstagram} />
-              </a>
-              <a
-                aria-label="twitter-link"
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon size={'40'} icon={socialTwitter} />
-              </a>
-            </div>
+            <Card>
+              <CardHeader>
+                <h2>Find Us On</h2>
+              </CardHeader>
+              <CardBody>
+                <CardText>
+                  <div className="info-icons">
+                    <a
+                      aria-label="facebook-link"
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon size={'40'} icon={socialFacebook} />
+                    </a>
+                    <a
+                      aria-label="instagram-link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon size={'40'} icon={socialInstagram} />
+                    </a>
+                    <a
+                      aria-label="twitter-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon size={'40'} icon={socialTwitter} />
+                    </a>
+                  </div>
+                  <Link to="/appointment">
+                    <button aria-label="schedule-appointment">
+                      Book your Appointment!
+                    </button>
+                  </Link>
+                </CardText>
+              </CardBody>
+            </Card>
           </Col>
         </Row>
       </Container>

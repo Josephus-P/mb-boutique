@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import '../appointments.scss';
 
 export default class Apppointments extends React.Component {
+  // eslint-disable-next-line
   constructor() {
     super();
   }
@@ -25,8 +26,12 @@ export default class Apppointments extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title="Book a Microblading Appointment | Microblading Boutique">
+        <Helmet title="Book Your Microblading Appointment | Microblading Boutique">
           <html lang="en" />
+          <meta
+            name="description"
+            content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
+          />
         </Helmet>
       </Layout>
     );

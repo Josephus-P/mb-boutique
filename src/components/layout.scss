@@ -19,8 +19,12 @@
 .navbar-nav {
   display: flex;
   align-items: center;
-  width: 70%;
+  width: 100%;
   font-family: 'Poppins';
+
+  @media (min-width: 1200px) {
+    width: 70%;
+  }
 
   .nav-item {
     @media (min-width: 992px) {
