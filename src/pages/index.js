@@ -8,9 +8,7 @@ import {
   Col,
   Card,
   CardHeader,
-  CardBody,
-  CardTitle,
-  CardText
+  CardBody
 } from 'reactstrap';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -85,24 +83,22 @@ const IndexPage = ({ data }) => (
                 <h2>Salon Info</h2>
               </CardHeader>
               <CardBody>
-                <CardText>
-                  <p>
-                    <strong>Hours</strong>:<br /> Varies (By Appointment Only)
-                  </p>
-                  <span>
-                    <strong>Address</strong>:<br />
-                  </span>
-                  <address>
-                    <a href="https://goo.gl/maps/W24CMHiKQYS2" rel="noopener">
-                      4550 W 95th St.
-                      <br /> Oak Lawn, IL 60453
-                    </a>
-                  </address>
-                  <p>
-                    <strong>Tel-Phone</strong>:{' '}
-                    <a href="tel:+9999999999">999-999-9999</a>
-                  </p>
-                </CardText>
+                <p>
+                  <strong>Hours</strong>:<br /> Varies (By Appointment Only)
+                </p>
+                <span>
+                  <strong>Address</strong>:<br />
+                </span>
+                <address>
+                  <a href="https://goo.gl/maps/W24CMHiKQYS2" rel="noopener">
+                    4550 W 95th St.
+                    <br /> Oak Lawn, IL 60453
+                  </a>
+                </address>
+                <p>
+                  <strong>Tel-Phone</strong>:{' '}
+                  <a href="tel:+9999999999">999-999-9999</a>
+                </p>
               </CardBody>
             </Card>
           </Col>
@@ -115,39 +111,37 @@ const IndexPage = ({ data }) => (
                 <h2>Find Us On</h2>
               </CardHeader>
               <CardBody>
-                <CardText>
-                  <div className="info-icons">
-                    <a
-                      aria-label="facebook-link"
-                      href="https://facebook.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon size={'40'} icon={socialFacebook} />
-                    </a>
-                    <a
-                      aria-label="instagram-link"
-                      href="https://instagram.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon size={'40'} icon={socialInstagram} />
-                    </a>
-                    <a
-                      aria-label="twitter-link"
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon size={'40'} icon={socialTwitter} />
-                    </a>
-                  </div>
-                  <Link to="/appointment">
-                    <button aria-label="schedule-appointment">
-                      Book your Appointment!
-                    </button>
-                  </Link>
-                </CardText>
+                <div className="info-icons">
+                  <a
+                    aria-label="facebook-link"
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon size={'40'} icon={socialFacebook} />
+                  </a>
+                  <a
+                    aria-label="instagram-link"
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon size={'40'} icon={socialInstagram} />
+                  </a>
+                  <a
+                    aria-label="twitter-link"
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon size={'40'} icon={socialTwitter} />
+                  </a>
+                </div>
+                <Link to="/appointment">
+                  <button aria-label="schedule-appointment">
+                    Book your Appointment!
+                  </button>
+                </Link>
               </CardBody>
             </Card>
           </Col>
