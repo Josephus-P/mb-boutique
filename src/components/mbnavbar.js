@@ -10,12 +10,8 @@ import {
   NavLink
 } from 'reactstrap';
 import Icon from 'react-icons-kit';
-import {
-  socialInstagram,
-  socialFacebook,
-  socialTwitter
-} from 'react-icons-kit/typicons';
-
+import { socialInstagram, socialFacebook } from 'react-icons-kit/typicons';
+import { yelp } from 'react-icons-kit/fa/yelp';
 export default class MBNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -84,7 +80,7 @@ export default class MBNavbar extends React.Component {
           </NavItem>
           <NavItem className="mx-auto">
             <NavLink
-              href="https://instagram.com"
+              href="https://www.instagram.com/microbladingboutique/"
               target="_blank"
               rel="noopener"
               className="d-inline"
@@ -94,12 +90,12 @@ export default class MBNavbar extends React.Component {
           </NavItem>
           <NavItem className="mx-auto">
             <NavLink
-              href="https://twitter.com"
+              href="https://www.yelp.com/biz/microblading-boutique-oak-lawn-3"
               target="_blank"
               rel="noopener"
               className="d-inline"
             >
-              <Icon size={'26'} icon={socialTwitter} />
+              <Icon size={'26'} icon={yelp} />
             </NavLink>
           </NavItem>
         </Nav>

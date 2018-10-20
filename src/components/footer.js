@@ -1,18 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, NavLink } from 'reactstrap';
 import Icon from 'react-icons-kit';
-import {
-  socialInstagram,
-  socialFacebook,
-  socialTwitter,
-} from 'react-icons-kit/typicons';
+import { socialInstagram, socialFacebook } from 'react-icons-kit/typicons';
+import { yelp } from 'react-icons-kit/fa/yelp';
 
 export default class Footer extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      year: new Date().getFullYear(),
+      year: new Date().getFullYear()
     };
   }
 
@@ -24,7 +21,7 @@ export default class Footer extends React.Component {
             <Col>
               <NavLink
                 aria-label="facebook-link"
-                href="https://facebook.com"
+                href="https://www.facebook.com/browsbymrs.e/"
                 target="_blank"
                 rel="noopener"
               >
@@ -32,7 +29,7 @@ export default class Footer extends React.Component {
               </NavLink>
               <NavLink
                 aria-label="instagram-link"
-                href="https://instagram.com"
+                href="https://www.instagram.com/microbladingboutique/"
                 target="_blank"
                 rel="noopener"
               >
@@ -40,11 +37,11 @@ export default class Footer extends React.Component {
               </NavLink>
               <NavLink
                 aria-label="twitter-link"
-                href="https://twitter.com"
+                href="https://www.yelp.com/biz/microblading-boutique-oak-lawn-3"
                 target="_blank"
                 rel="noopener"
               >
-                <Icon size={'22'} icon={socialTwitter} />
+                <Icon size={'22'} icon={yelp} />
               </NavLink>
             </Col>
             <Col xs="12">
@@ -53,7 +50,7 @@ export default class Footer extends React.Component {
                 {this.state.year} All rights reserved | Website designed and
                 built by{' '}
                 <a href="http://josephusdev.com" rel="noopener">
-                  JosephusDev
+                  Josue Peralta
                 </a>
               </p>
             </Col>

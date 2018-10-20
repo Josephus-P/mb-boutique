@@ -13,11 +13,8 @@ import {
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Icon from 'react-icons-kit';
-import {
-  socialInstagram,
-  socialFacebook,
-  socialTwitter
-} from 'react-icons-kit/typicons';
+import { socialInstagram, socialFacebook } from 'react-icons-kit/typicons';
+import { yelp } from 'react-icons-kit/fa/yelp';
 import MBCarousel from '../components/mbcarousel';
 import 'typeface-playfair-display';
 import 'typeface-poppins';
@@ -97,7 +94,7 @@ const IndexPage = ({ data }) => (
                 </address>
                 <p>
                   <strong>Tel-Phone</strong>:{' '}
-                  <a href="tel:+9999999999">999-999-9999</a>
+                  <a href="tel:+17737933269">773-793-3269</a>
                 </p>
               </CardBody>
             </Card>
@@ -114,7 +111,7 @@ const IndexPage = ({ data }) => (
                 <div className="info-icons">
                   <a
                     aria-label="facebook-link"
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/browsbymrs.e/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -122,7 +119,7 @@ const IndexPage = ({ data }) => (
                   </a>
                   <a
                     aria-label="instagram-link"
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/microbladingboutique/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -130,11 +127,11 @@ const IndexPage = ({ data }) => (
                   </a>
                   <a
                     aria-label="twitter-link"
-                    href="https://twitter.com"
+                    href="https://www.yelp.com/biz/microblading-boutique-oak-lawn-3"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon size={'40'} icon={socialTwitter} />
+                    <Icon size={'40'} icon={yelp} />
                   </a>
                 </div>
                 <Link to="/appointment">

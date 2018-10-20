@@ -1,12 +1,8 @@
 .navbar-brand {
   font-family: 'Milonga';
   color: #00ad9f99 !important;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   transition: 0.3s;
-
-  @media (min-width: 575px) {
-    font-size: 1.6rem;
-  }
 
   &:hover {
     color: black !important;
@@ -67,12 +63,12 @@
     margin-bottom: 25px;
 
     .nav-link {
-      color: #999999;
+      color: #d0d0d0;
       transition: 0.3s;
 
       &:hover {
         cursor: pointer;
-        color: #fff;
+        color: #999999;
       }
     }
   }
@@ -82,12 +78,12 @@
 
     a {
       transition: 0.3s;
-      color: #999999;
+      color: #d0d0d0;
       text-decoration: none;
 
       &:hover {
         cursor: pointer;
-        color: #fff;
+        color: #999999;
       }
     }
   }
