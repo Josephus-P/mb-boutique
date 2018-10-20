@@ -2,8 +2,9 @@
 .jumbotron-fluid {
   margin-top: 25px;
   padding: 0;
-  background: url(./images/eyebrows_jumbotron_sm.jpg);
-  background-size: 640px;
+  background: url(./images/eyes.jpg);
+  background-size: contain;
+  background-position-y: 60px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 30vh;
@@ -11,14 +12,12 @@
   @media (min-width: 575px) {
     margin-top: 50px;
     background-size: contain;
+    background-position-y: 0;
   }
 
   @media (min-width: 576px) {
-    background: url(./images/eyebrows_jumbotron.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    min-height: 60vh;
+    min-height: 50vh;
   }
 
   .jumbo-row {
@@ -58,7 +57,6 @@
         color: #fff;
         font-family: 'Poppins';
         font-size: 1rem;
-        margin-bottom: 0;
         width: 100%;
         padding: 10px;
         transition: 0.3s;
@@ -67,10 +65,6 @@
           font-size: 1.5rem;
           margin-bottom: 50px;
           padding: 15px;
-        }
-
-        @media (min-width: 993px) {
-          margin-bottom: 0px;
         }
 
         &:hover {
@@ -97,20 +91,17 @@
     flex-flow: row wrap;
     justify-content: center;
     margin-bottom: 50px;
-    font-family: 'Playfair Display';
+    font-family: 'Poppins';
     text-align: center;
 
     h2 {
       margin-bottom: 50px;
+      font-family: 'Playfair Display';
     }
 
     p {
       line-height: 2;
     }
-  }
-
-  .about-mb-img-col {
-    margin-bottom: 50px;
   }
 
   a {
@@ -131,15 +122,25 @@
       }
     }
   }
+
+  .about-mb-img-col {
+    .gatsby-image-wrapper {
+      height: 100%;
+    }
+    img {
+      object-fit: contain !important;
+    }
+  }
 }
 
 /********** SHOP INFO SECTION **********/
 
 .shop-info-fluid {
-  font-family: 'Playfair Display';
-  background-color: #f4f6f4;
+  font-family: 'Poppins';
+  background-color: #f8f9fa;
 
   h2 {
+    font-family: 'Playfair Display';
     text-align: center;
   }
 
@@ -246,7 +247,7 @@
 /********** MEET MONICA SECTION **********/
 
 .meet-monica {
-  font-family: 'Playfair Display';
+  font-family: 'Poppins';
   margin-top: 50px;
 
   @media (min-width: 767px) {
@@ -262,6 +263,7 @@
     h2 {
       margin-top: 25px;
       margin-bottom: 25px;
+      font-family: 'Playfair Display';
 
       @media (min-width: 767px) {
         margin-top: 0px;
@@ -271,7 +273,7 @@
 
     p {
       margin-bottom: 25px;
-
+      line-height: 2;
       @media (min-width: 767px) {
         margin-bottom: 0;
       }

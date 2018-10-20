@@ -1,30 +1,17 @@
 import React, { Component } from 'react';
 import {
+  Container,
+  Row,
+  Col,
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators
 } from 'reactstrap';
+import Img from 'gatsby-image';
+import './mbcarousel.scss';
 
-const items = [
-  {
-    src:
-      'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa1d%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa1d%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 1'
-  },
-  {
-    src:
-      'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 2'
-  },
-  {
-    src:
-      'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 3'
-  }
-];
-
-class MBCarousel extends Component {
+export default class MBCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };
@@ -43,7 +30,7 @@ class MBCarousel extends Component {
     this.animating = false;
   }
 
-  next() {
+  next(items) {
     if (this.animating) return;
     const nextIndex =
       this.state.activeIndex === items.length - 1
@@ -52,7 +39,7 @@ class MBCarousel extends Component {
     this.setState({ activeIndex: nextIndex });
   }
 
-  previous() {
+  previous(items) {
     if (this.animating) return;
     const nextIndex =
       this.state.activeIndex === 0
@@ -68,6 +55,33 @@ class MBCarousel extends Component {
 
   render() {
     const { activeIndex } = this.state;
+    const items = [
+      {
+        src: this.props.anna,
+        text: `I’ve had the most amazing, absolutely delightful experience
+          working with Monica. From the beginning of my first
+          appointment, she took ample time to fully explain the process
+          to me and answered all my questions, easing any fears or
+          concerns that came to mind. She is extremely talented,
+          detailed, and precise. Monica took the time to follow up with
+          me via text in between my first appointment and my touch-up to
+          make sure the healing was going smoothly. On top of all that,
+          she is so kind, funny, and easy to talk to. I am really
+          pleased with the finished result -I highly recommend Monica to
+          anyone who is considering microblading!`,
+        altText: 'anna'
+      },
+      {
+        src: this.props.kathryn,
+        text: `I was referred to Monica from a friend, I had wanted to have my brows done for some time but could never find the one. Monica is so relatable, warm, friendly and genuinely concerned with your results. To say Monica is simply amazing at her craft in an understatement. Every day I receive compliments on my brows and everyone wants to know , how to get the same results. Monica is a true professional who is dedicated and simply the best !!!!!!! Everyone who has had their brows done by her falls in love with their results and her.`,
+        altText: 'kathryn'
+      },
+      {
+        src: this.props.nina,
+        text: `I’m a bit of a perfectionist and lucky for me so is Monica, even though we both knew brows are sisters not twins. The shape was perfect for my face and the colors she mixed together was the color of my hair. My brows looked natural. I couldn’t have asked for anything more. I was completely satisfied with the work that she had done. Now here we are a year later and my brows still look amazing and the color is still what it was last year. I say this just to show you that Monica uses the best products to give the best results to all her clients. I will be forever grateful for my brow angel, Monica. She seriously saved my life! `,
+        altText: 'nina'
+      }
+    ];
 
     const slides = items.map((item, index) => {
       return (
@@ -76,7 +90,20 @@ class MBCarousel extends Component {
           onExited={this.onExited}
           key={index}
         >
-          <img src={item.src} alt={item.altText} />
+          <Container>
+            <Row>
+              <Col xs="12" md="6">
+                <Img
+                  className="align-center"
+                  fluid={item.src}
+                  alt={item.altText}
+                />
+              </Col>
+              <Col xs="12" md="6">
+                <p>{item.text}</p>
+              </Col>
+            </Row>
+          </Container>
         </CarouselItem>
       );
     });
@@ -84,8 +111,8 @@ class MBCarousel extends Component {
     return (
       <Carousel
         activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
+        next={() => this.next(items)}
+        previous={() => this.previous(items)}
       >
         <CarouselIndicators
           items={items}
@@ -96,16 +123,14 @@ class MBCarousel extends Component {
         <CarouselControl
           direction="prev"
           directionText="Previous"
-          onClickHandler={this.previous}
+          onClickHandler={() => this.previous(items)}
         />
         <CarouselControl
           direction="next"
           directionText="Next"
-          onClickHandler={this.next}
+          onClickHandler={() => this.next(items)}
         />
       </Carousel>
     );
   }
 }
-
-export default MBCarousel;

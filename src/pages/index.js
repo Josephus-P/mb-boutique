@@ -57,15 +57,15 @@ const IndexPage = ({ data }) => (
         <Col className="about-mb-desc" lg="6">
           <h2>What is Eyebrow Microblading?</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
-            fugiat amet iusto, voluptatem repellat corrupti suscipit facere
-            blanditiis, unde nemo ratione accusantium nobis debitis sed vitae
-            commodi. Vitae, ipsa aut.Reprehenderit eveniet atque, ipsa nulla ea
-            at id velit eius rerum illum iste quae aliquam perferendis nihil non
-            vitae ratione maiores incidunt vel accusamus dolores, itaque quod,
-            rem fuga. Ex.
+            Microblading is a relatively new method for enhancing eyebrows that
+            is considered to be permanent makeup. It is done by using a very
+            fine blade to deposit pigment into the epidermis. Because the color
+            is closer to the surface, the strokes appear crisp and very fine.
+            There is no spilling under the skin and it creates an individual
+            look perfect for your face and the style you are trying to achieve.
+            Best of all, your eyebrows will absolutely not appear as a tattoo.
           </p>
-          <Link to="/microblading">
+          <Link to="/what-is-microblading">
             <button aria-label="schedule-appointment">Learn More</button>
           </Link>
         </Col>
@@ -151,21 +151,30 @@ const IndexPage = ({ data }) => (
     <Container className="meet-monica" fluid>
       <Container>
         <Row>
-          <Col xs="12" md="6">
+          <Col xs="12" xl="6">
             <Img fluid={data.monica.childImageSharp.fluid} />
           </Col>
-          <Col className="monica-about" xs="12" md="6">
+          <Col className="monica-about" xs="12" xl="6">
             <h2>Meet Monica</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis repellat possimus, excepturi harum aliquid perspiciatis
-              impedit rerum, molestiae, atque accusantium iure esse neque quis
-              consequatur placeat cumque tenetur ducimus libero?Fugiat, ea quae!
-              Voluptates assumenda consectetur unde blanditiis quia id nesciunt
-              facilis nihil voluptatem necessitatibus modi expedita maiores,
-              ratione recusandae autem dolore veritatis aperiam cumque, eos
-              inventore. Iure, incidunt facilis.
+              With over 15 years of experience as a beauty and skin expert, I'm
+              no stranger to the industry. I have trained with the top
+              Microblading Academy in the world and have received 3
+              certifications in Permanent Makeup. I only use top of the line
+              tools and the materials that will be placed under your skin are
+              high quality. I am passionate to help you achieve your brow goals
+              and to foster a beautiful relationship when we meet for the first
+              time.
+              <br />
+              <br />
             </p>
+            <blockquote>
+              <em>
+                "I believe you are put on this earth to achieve your greatest
+                self, to live out your purpose and to do it courageously."
+              </em>
+            </blockquote>
+            <cite>~ Steve Maraboli</cite>
           </Col>
         </Row>
       </Container>
@@ -175,8 +184,12 @@ const IndexPage = ({ data }) => (
         <Col xs="12">
           <h2>Testimonials</h2>
         </Col>
-        <Col xs="12" md="8" className="offset-md-2">
-          <MBCarousel />
+        <Col xs="12">
+          <MBCarousel
+            anna={data.anna.childImageSharp.fluid}
+            kathryn={data.kathryn.childImageSharp.fluid}
+            nina={data.nina.childImageSharp.fluid}
+          />
         </Col>
       </Row>
     </Container>
@@ -197,13 +210,22 @@ export const fluidImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    mbHome: file(relativePath: { eq: "microblading-home.jpg" }) {
+    mbHome: file(relativePath: { eq: "eyebrows_home.jpg" }) {
       ...fluidImage
     }
     storefront: file(relativePath: { eq: "salon.jpg" }) {
       ...fluidImage
     }
     monica: file(relativePath: { eq: "monica.jpg" }) {
+      ...fluidImage
+    }
+    anna: file(relativePath: { eq: "anna.jpg" }) {
+      ...fluidImage
+    }
+    kathryn: file(relativePath: { eq: "kathryn.jpg" }) {
+      ...fluidImage
+    }
+    nina: file(relativePath: { eq: "nina.jpg" }) {
       ...fluidImage
     }
   }
