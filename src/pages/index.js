@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Layout from '../components/layout';
 import {
   Jumbotron,
   Container,
@@ -10,6 +9,7 @@ import {
   CardHeader,
   CardBody
 } from 'reactstrap';
+import Layout from '../components/layout';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Icon from 'react-icons-kit';
@@ -23,7 +23,7 @@ import '../index.scss';
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Helmet title="Oak Lawn Microblading Services | Microblading Boutique">
+    <Helmet title="Microblading Services, Oak Lawn | Microblading Boutique">
       <html lang="en" />
       <meta
         name="description"
@@ -60,10 +60,12 @@ const IndexPage = ({ data }) => (
             is closer to the surface, the strokes appear crisp and very fine.
             There is no spilling under the skin and it creates an individual
             look perfect for your face and the style you are trying to achieve.
-            Best of all, your eyebrows will absolutely not appear as a tattoo.
+            Best of all, your eyebrows will absolutely not appear as a tattoo!
           </p>
-          <Link to="/what-is-microblading">
-            <button aria-label="schedule-appointment">Learn More</button>
+          <Link to="/microblading">
+            <button aria-label="schedule-appointment">
+              Learn More About Microblading
+            </button>
           </Link>
         </Col>
         <Col className="about-mb-img-col" lg={{ size: 5, offset: 1 }}>
@@ -158,10 +160,10 @@ const IndexPage = ({ data }) => (
               no stranger to the industry. I have trained with the top
               Microblading Academy in the world and have received 3
               certifications in Permanent Makeup. I only use top of the line
-              tools and the materials that will be placed under your skin are
-              high quality. I am passionate to help you achieve your brow goals
-              and to foster a beautiful relationship when we meet for the first
-              time.
+              100% disposable tools and the materials that will be placed under
+              your skin are high quality. I am passionate to help you achieve
+              your brow goals and to foster a beautiful relationship when we
+              meet for the first time.
               <br />
               <br />
             </p>

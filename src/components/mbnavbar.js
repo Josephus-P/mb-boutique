@@ -53,7 +53,7 @@ export default class MBNavbar extends React.Component {
               </Link>
             </NavItem>
             <NavItem className="py-2">
-              <Link onClick={this.removeIframe} to="/what-is-microblading">
+              <Link onClick={this.removeIframe} to="/microblading">
                 What is Microblading?
               </Link>
             </NavItem>
