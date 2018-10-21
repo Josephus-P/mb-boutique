@@ -4,12 +4,13 @@
   padding: 0;
   background: url(./images/eyes.jpg);
   background-size: 600px;
-  background-position-y: 60px;
+  background-position-y: 20px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 30vh;
 
   @media (min-width: 575px) {
+    background-position-y: 60px;
     margin-top: 50px;
     background-size: contain;
     background-position-y: 0;

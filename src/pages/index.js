@@ -126,7 +126,7 @@ const IndexPage = ({ data }) => (
                     <Icon size={'40'} icon={socialInstagram} />
                   </a>
                   <a
-                    aria-label="twitter-link"
+                    aria-label="yelp-link"
                     href="https://www.yelp.com/biz/microblading-boutique-oak-lawn-3"
                     target="_blank"
                     rel="noopener noreferrer"

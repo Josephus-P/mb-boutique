@@ -36,7 +36,7 @@ export default class Footer extends React.Component {
                 <Icon size={'22'} icon={socialInstagram} />
               </NavLink>
               <NavLink
-                aria-label="twitter-link"
+                aria-label="yelp-link"
                 href="https://www.yelp.com/biz/microblading-boutique-oak-lawn-3"
                 target="_blank"
                 rel="noopener"

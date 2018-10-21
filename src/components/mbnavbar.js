@@ -70,6 +70,7 @@ export default class MBNavbar extends React.Component {
         <Nav className="d-none d-lg-flex mx-auto icon-bar">
           <NavItem className="mx-auto">
             <NavLink
+              aria-label="facebook-link"
               href="https://www.facebook.com/browsbymrs.e/"
               target="_blank"
               rel="noopener"
@@ -80,6 +81,7 @@ export default class MBNavbar extends React.Component {
           </NavItem>
           <NavItem className="mx-auto">
             <NavLink
+              aria-label="instagram-link"
               href="https://www.instagram.com/microbladingboutique/"
               target="_blank"
               rel="noopener"
@@ -90,6 +92,7 @@ export default class MBNavbar extends React.Component {
           </NavItem>
           <NavItem className="mx-auto">
             <NavLink
+              aria-label="yelp-link"
               href="https://www.yelp.com/biz/microblading-boutique-oak-lawn-3"
               target="_blank"
               rel="noopener"
