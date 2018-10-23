@@ -1,11 +1,27 @@
-.navbar-brand {
+body {
+  font-family: 'Poppins';
+
+  h1,
+  h2,
+  h5 {
+    font-family: 'Playfair Display';
+  }
+}
+
+.brand {
   font-family: 'Milonga';
-  color: #00ad9f99 !important;
-  font-size: 1.4rem !important;
+  color: #00ad9f99;
+  font-size: 1.25rem;
   transition: 0.3s;
 
   &:hover {
-    color: black !important;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+
+  @media (min-width: 576px) {
+    font-size: 1.4rem;
   }
 }
 
@@ -13,7 +29,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  font-family: 'Poppins';
 
   @media (min-width: 1200px) {
     width: 70%;

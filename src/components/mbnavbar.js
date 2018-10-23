@@ -4,7 +4,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink
@@ -43,7 +42,9 @@ export default class MBNavbar extends React.Component {
   render() {
     return (
       <Navbar className="fixed-top" color="light" light expand="lg">
-        <NavbarBrand href="/">Microblading Boutique</NavbarBrand>
+        <Link className="brand" to="/">
+          Microblading Boutique
+        </Link>
         <NavbarToggler onClick={this.toggle} aria-label="menu-button" />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mx-auto" navbar>
