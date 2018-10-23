@@ -1,13 +1,3 @@
-body {
-  font-family: 'Poppins';
-
-  h1,
-  h2,
-  h5 {
-    font-family: 'Playfair Display';
-  }
-}
-
 .brand {
   font-family: 'Milonga';
   color: #00ad9f99;
@@ -44,6 +34,7 @@ body {
       font-size: 1rem;
       color: black;
       transition: 0.3s;
+      font-family: 'Poppins';
 
       &:hover {
         text-decoration: none;
