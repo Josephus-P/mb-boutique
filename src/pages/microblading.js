@@ -14,7 +14,7 @@ const Microblading = () => (
     >
       <html lang="en" />
     </Helmet>
-    <Container className="about-mb">
+    <Container className="about-mb-page">
       <Row>
         <Col xs="12">
           <h1>What is Microblading?</h1>

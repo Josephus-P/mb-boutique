@@ -42,7 +42,7 @@ export default class MBNavbar extends React.Component {
   render() {
     return (
       <Navbar className="fixed-top" color="light" light expand="lg">
-        <Link className="brand" to="/">
+        <Link className="brand" onClick={this.removeIframe} to="/">
           Microblading Boutique
         </Link>
         <NavbarToggler onClick={this.toggle} aria-label="menu-button" />

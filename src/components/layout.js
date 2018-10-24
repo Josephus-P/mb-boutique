@@ -4,6 +4,9 @@ import MBNavbar from './mbnavbar';
 import Footer from './footer';
 import 'bootstrap/dist/css/bootstrap.css';
 import './layout.scss';
+import 'typeface-playfair-display';
+import 'typeface-poppins';
+import 'typeface-milonga';
 
 const Layout = ({ children }) => (
   <div>
@@ -14,7 +17,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;
