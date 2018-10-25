@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
 import MBAccordian from '../components/mbAccordian';
 import 'typeface-playfair-display';
-import '../about-mb.scss';
+import '../scss/about-mb.scss';
 
 const Microblading = () => (
   <Layout>

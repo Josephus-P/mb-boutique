@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
-import '../appointments.scss';
+import '../scss/appointments.scss';
 
 export default class Apppointments extends React.Component {
   componentDidMount() {

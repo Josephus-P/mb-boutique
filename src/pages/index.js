@@ -19,7 +19,7 @@ import MBCarousel from '../components/mbcarousel';
 import 'typeface-playfair-display';
 import 'typeface-poppins';
 import 'typeface-milonga';
-import '../index.scss';
+import '../scss/index.scss';
 
 const IndexPage = ({ data }) => (
   <Layout>

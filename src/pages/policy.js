@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
 import Layout from '../components/layout';
 import 'typeface-playfair-display';
-import '../policy.scss';
+import '../scss/policy.scss';
 
 const Policy = () => (
   <Layout>
