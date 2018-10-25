@@ -13,6 +13,13 @@ export default class Apppointments extends React.Component {
     document.body.insertBefore(script, document.body.firstChild);
   }
 
+  componentWillUnmount() {
+    let element = document.getElementsByTagName('IFRAME');
+
+    if (element != null && element.length > 0)
+      document.body.removeChild(element.item(0));
+  }
+
   render() {
     return (
       <Layout>

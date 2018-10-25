@@ -49,7 +49,7 @@ export default class Footer extends React.Component {
                 Copyright &copy;
                 {this.state.year} All rights reserved | Website designed and
                 built by{' '}
-                <a href="http://josephusdev.com" rel="noopener">
+                <a href="https://www.josephusdev.com" rel="noopener">
                   Josue Peralta
                 </a>
               </p>
