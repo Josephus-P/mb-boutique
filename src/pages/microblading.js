@@ -8,11 +8,12 @@ import '../scss/about-mb.scss';
 
 const Microblading = () => (
   <Layout>
-    <Helmet
-      title="What is Microblading? | Microblading Boutique"
-      content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
-    >
+    <Helmet title="What is Microblading? | Microblading Boutique">
       <html lang="en" />
+      <meta
+        name="description"
+        content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
+      />
     </Helmet>
     <Container className="about-mb-page">
       <Row>

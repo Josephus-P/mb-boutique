@@ -7,11 +7,12 @@ import '../scss/policy.scss';
 
 const Policy = () => (
   <Layout>
-    <Helmet
-      title="Our Policy | Microblading Boutique"
-      content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
-    >
+    <Helmet title="Our Policy | Microblading Boutique">
       <html lang="en" />
+      <meta
+        name="description"
+        content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
+      />
     </Helmet>
     <Container className="policy">
       <Row>
