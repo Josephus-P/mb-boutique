@@ -16,7 +16,6 @@ export default class MBCarousel extends Component {
         emulateTouch={true}
         infiniteLoop={true}
         interval={8000}
-        swipeScrollTolerance={0}
       >
         <Container>
           <Row>
