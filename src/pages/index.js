@@ -95,7 +95,7 @@ export default class HomePage extends Component {
   };
 
   componentDidMount() {
-    TweenLite.to(this.jumboTxt, 2, { opacity: 1 });
+    TweenLite.to(this.jumboTxt, 2, { opacity: 1, delay: 1 });
     this.aboutIMG = document.getElementsByClassName('about-img').item(0);
     this.monicaIMG = document.getElementsByClassName('monica-img').item(0);
 
