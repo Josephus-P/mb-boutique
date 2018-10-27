@@ -16,7 +16,7 @@ import Icon from 'react-icons-kit';
 import { socialInstagram, socialFacebook } from 'react-icons-kit/typicons';
 import { yelp } from 'react-icons-kit/fa/yelp';
 import MBCarousel from '../components/mbcarousel';
-import { TweenMax } from 'gsap/all';
+import { TweenLite } from 'gsap';
 import 'typeface-playfair-display';
 import 'typeface-poppins';
 import 'typeface-milonga';
@@ -40,14 +40,14 @@ export default class HomePage extends Component {
     this.rectMonica = this.monicaText.getBoundingClientRect();
 
     if (wHeight > this.rectAbout.top + this.rectAbout.height / 2)
-      TweenMax.to(this.aboutMBText, 2, { opacity: 1 });
+      TweenLite.to(this.aboutMBText, 2, { opacity: 1 });
 
     if (wHeight > this.rectMonica.top + this.rectMonica.height / 2)
-      TweenMax.to(this.monicaText, 2, { opacity: 1 });
+      TweenLite.to(this.monicaText, 2, { opacity: 1 });
   };
 
   componentDidMount() {
-    TweenMax.to(this.jumboTxt, 2, { opacity: 1 });
+    TweenLite.to(this.jumboTxt, 2, { opacity: 1 });
 
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', this.fadeIn);
