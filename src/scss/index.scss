@@ -147,10 +147,12 @@
     }
     .gatsby-image-wrapper {
       height: 100%;
-    }
-    img {
-      object-fit: contain !important;
-      font-family: 'object-fit: contain !important; object-position: center center !important;';
+      opacity: 0;
+
+      img {
+        object-fit: contain !important;
+        font-family: 'object-fit: contain !important; object-position: center center !important;';
+      }
     }
   }
 }
@@ -282,6 +284,13 @@
     margin-bottom: 100px;
   }
 
+  .gatsby-image-wrapper {
+    opacity: 0;
+    img {
+      font-family: 'object-fit: cover !important; object-position: center center !important;';
+    }
+  }
+
   .monica-about {
     text-align: center;
 
@@ -305,12 +314,6 @@
 
       @media (min-width: 767px) {
         margin-bottom: 0;
-      }
-    }
-
-    .gatsby-image-wrapper {
-      img {
-        font-family: 'object-fit: cover !important; object-position: center center !important;';
       }
     }
   }

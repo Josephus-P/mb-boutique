@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
 import Helmet from 'react-helmet';
-import { Match } from '@reach/router';
 import { Container, Row, Col } from 'reactstrap';
 import MBAccordian from '../components/mbAccordian';
 import 'typeface-playfair-display';
@@ -16,9 +15,6 @@ const Microblading = () => (
         content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
       />
     </Helmet>
-    <Match path="/microblading">
-      {props => (props.match ? console.log('match') : console.log('null'))}
-    </Match>
     <Container className="about-mb-page">
       <Row>
         <Col xs="12">

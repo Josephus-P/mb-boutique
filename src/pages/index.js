@@ -26,28 +26,78 @@ export default class HomePage extends Component {
   constructor(props) {
     super(props);
     this.jumboTxt = null;
-
+    this.aboutIMG = null;
     this.aboutMBText = null;
+    this.monicaIMG = null;
     this.monicaText = null;
 
     this.rectAbout = null;
     this.rectMonica = null;
+    this.rectMonicaIMG = null;
+    this.rectAboutIMG = null;
+
+    this.state = {
+      animatedAboutTxt: false,
+      animatedAboutImg: false,
+      animatedMonicaImg: false,
+      animatedMonicaTxt: false
+    };
   }
 
   fadeIn = () => {
     let wHeight = window.innerHeight;
     this.rectAbout = this.aboutMBText.getBoundingClientRect();
     this.rectMonica = this.monicaText.getBoundingClientRect();
+    this.rectMonicaIMG = this.monicaIMG.getBoundingClientRect();
+    this.rectAboutIMG = this.aboutIMG.getBoundingClientRect();
 
-    if (wHeight > this.rectAbout.top + this.rectAbout.height / 2)
+    if (
+      this.state.animatedAboutTxt === false &&
+      wHeight > this.rectAbout.top + this.rectAbout.height / 2
+    ) {
       TweenLite.to(this.aboutMBText, 2, { opacity: 1 });
+      this.setState({ animatedAboutTxt: true });
+    }
 
-    if (wHeight > this.rectMonica.top + this.rectMonica.height / 2)
+    if (
+      this.state.animatedAboutImg === false &&
+      wHeight > this.rectAboutIMG.top + this.rectAboutIMG.height / 2
+    ) {
+      TweenLite.fromTo(
+        this.aboutIMG,
+        1,
+        { left: 100 },
+        { left: 0, opacity: 1 }
+      );
+      this.setState({ animatedAboutImg: true });
+    }
+
+    if (
+      this.state.animatedMonicaTxt === false &&
+      wHeight > this.rectMonica.top + this.rectMonica.height / 2
+    ) {
       TweenLite.to(this.monicaText, 2, { opacity: 1 });
+      this.setState({ animatedMonicaTxt: true });
+    }
+
+    if (
+      this.state.animatedMonicaImg === false &&
+      wHeight > this.rectMonicaIMG.top + this.rectMonicaIMG.height / 2
+    ) {
+      TweenLite.fromTo(
+        this.monicaIMG,
+        1,
+        { right: 100 },
+        { right: 0, opacity: 1 }
+      );
+      this.setState({ animatedMonicaImg: true });
+    }
   };
 
   componentDidMount() {
     TweenLite.to(this.jumboTxt, 2, { opacity: 1 });
+    this.aboutIMG = document.getElementsByClassName('about-img').item(0);
+    this.monicaIMG = document.getElementsByClassName('monica-img').item(0);
 
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', this.fadeIn);
@@ -112,7 +162,10 @@ export default class HomePage extends Component {
               </Link>
             </Col>
             <Col className="about-mb-img-col" lg={{ size: 5, offset: 1 }}>
-              <Img fluid={this.props.data.mbHome.childImageSharp.fluid} />
+              <Img
+                className="about-img"
+                fluid={this.props.data.mbHome.childImageSharp.fluid}
+              />
             </Col>
           </Row>
         </Container>
@@ -194,7 +247,10 @@ export default class HomePage extends Component {
           <Container>
             <Row>
               <Col xs="12" xl="6">
-                <Img fluid={this.props.data.monica.childImageSharp.fluid} />
+                <Img
+                  className="monica-img"
+                  fluid={this.props.data.monica.childImageSharp.fluid}
+                />
               </Col>
               <Col className="monica-about" xs="12" xl="6">
                 <h2>Meet Monica</h2>
