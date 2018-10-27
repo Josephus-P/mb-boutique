@@ -21,6 +21,7 @@ export default class Apppointments extends React.Component {
   }
 
   render() {
+    console.log(this.props.location.pathname);
     return (
       <Layout>
         <Helmet title="Book Your Microblading Appointment | Microblading Boutique">

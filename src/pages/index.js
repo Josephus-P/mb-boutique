@@ -16,7 +16,7 @@ import Icon from 'react-icons-kit';
 import { socialInstagram, socialFacebook } from 'react-icons-kit/typicons';
 import { yelp } from 'react-icons-kit/fa/yelp';
 import MBCarousel from '../components/mbcarousel';
-import { TweenLite } from 'gsap';
+import { TweenMax } from 'gsap/all';
 import 'typeface-playfair-display';
 import 'typeface-poppins';
 import 'typeface-milonga';
@@ -25,6 +25,8 @@ import '../scss/index.scss';
 export default class HomePage extends Component {
   constructor(props) {
     super(props);
+    this.jumboTxt = null;
+
     this.aboutMBText = null;
     this.monicaText = null;
 
@@ -38,13 +40,15 @@ export default class HomePage extends Component {
     this.rectMonica = this.monicaText.getBoundingClientRect();
 
     if (wHeight > this.rectAbout.top + this.rectAbout.height / 2)
-      TweenLite.to(this.aboutMBText, 1, { opacity: 1 });
+      TweenMax.to(this.aboutMBText, 2, { opacity: 1 });
 
     if (wHeight > this.rectMonica.top + this.rectMonica.height / 2)
-      TweenLite.to(this.monicaText, 1, { opacity: 1 });
+      TweenMax.to(this.monicaText, 2, { opacity: 1 });
   };
 
   componentDidMount() {
+    TweenMax.to(this.jumboTxt, 2, { opacity: 1 });
+
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', this.fadeIn);
     }
@@ -73,7 +77,9 @@ export default class HomePage extends Component {
             </Row>
             <Row className="jumbo-row">
               <Col xs="12">
-                <h1>Changing the World One Brow at a Time</h1>
+                <h1 ref={h1 => (this.jumboTxt = h1)}>
+                  Changing the World One Brow at a Time
+                </h1>
               </Col>
               <Col xs="12" sm="6" className="btn-col">
                 <Link to="/appointment">
