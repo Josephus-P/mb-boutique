@@ -26,8 +26,6 @@ export default class HomePage extends Component {
   constructor(props) {
     super(props);
 
-    this.timedEvent = null;
-
     this.jumboTxt = null;
     this.aboutIMG = null;
     this.aboutMBText = null;
@@ -48,68 +46,78 @@ export default class HomePage extends Component {
   }
 
   fadeIn = () => {
-    console.log('event fired!');
-    clearTimeout(this.timedEvent);
+    //console.log('fade check');
 
-    this.timedEvent = setTimeout(() => {
-      console.log('fade check');
-      let wHeight = window.innerHeight;
-      this.rectAbout = this.aboutMBText.getBoundingClientRect();
-      this.rectMonica = this.monicaText.getBoundingClientRect();
-      this.rectMonicaIMG = this.monicaIMG.getBoundingClientRect();
-      this.rectAboutIMG = this.aboutIMG.getBoundingClientRect();
+    let wHeight = window.innerHeight;
+    this.rectAbout = this.aboutMBText.getBoundingClientRect();
+    this.rectMonica = this.monicaText.getBoundingClientRect();
+    this.rectMonicaIMG = this.monicaIMG.getBoundingClientRect();
+    this.rectAboutIMG = this.aboutIMG.getBoundingClientRect();
 
-      if (
-        this.state.animatedAboutTxt === false &&
-        wHeight > this.rectAbout.top + this.rectAbout.height / 2
-      ) {
-        TweenLite.to(this.aboutMBText, 2, { opacity: 1 });
-        this.setState({ animatedAboutTxt: true });
+    if (
+      this.state.animatedAboutTxt === false &&
+      wHeight > this.rectAbout.top + this.rectAbout.height / 2
+    ) {
+      TweenLite.to(this.aboutMBText, 2, { opacity: 1 });
+      this.setState({ animatedAboutTxt: true });
+    }
+
+    if (
+      this.state.animatedAboutImg === false &&
+      wHeight > this.rectAboutIMG.top + this.rectAboutIMG.height / 2
+    ) {
+      TweenLite.fromTo(
+        this.aboutIMG,
+        1,
+        { left: 100 },
+        { left: 0, opacity: 1 }
+      );
+      this.setState({ animatedAboutImg: true });
+    }
+
+    if (
+      this.state.animatedMonicaTxt === false &&
+      wHeight > this.rectMonica.top + this.rectMonica.height / 2
+    ) {
+      TweenLite.to(this.monicaText, 2, { opacity: 1 });
+      this.setState({ animatedMonicaTxt: true });
+    }
+
+    if (
+      this.state.animatedMonicaImg === false &&
+      wHeight > this.rectMonicaIMG.top + this.rectMonicaIMG.height / 2
+    ) {
+      TweenLite.fromTo(
+        this.monicaIMG,
+        1,
+        { right: 100 },
+        { right: 0, opacity: 1 }
+      );
+      this.setState({ animatedMonicaImg: true });
+    }
+  };
+
+  throttled = (delay, fn) => {
+    let lastCall = 0;
+    return function(...args) {
+      const now = new Date().getTime();
+      if (now - lastCall < delay) {
+        return;
       }
-
-      if (
-        this.state.animatedAboutImg === false &&
-        wHeight > this.rectAboutIMG.top + this.rectAboutIMG.height / 2
-      ) {
-        TweenLite.fromTo(
-          this.aboutIMG,
-          1,
-          { left: 100 },
-          { left: 0, opacity: 1 }
-        );
-        this.setState({ animatedAboutImg: true });
-      }
-
-      if (
-        this.state.animatedMonicaTxt === false &&
-        wHeight > this.rectMonica.top + this.rectMonica.height / 2
-      ) {
-        TweenLite.to(this.monicaText, 2, { opacity: 1 });
-        this.setState({ animatedMonicaTxt: true });
-      }
-
-      if (
-        this.state.animatedMonicaImg === false &&
-        wHeight > this.rectMonicaIMG.top + this.rectMonicaIMG.height / 2
-      ) {
-        TweenLite.fromTo(
-          this.monicaIMG,
-          1,
-          { right: 100 },
-          { right: 0, opacity: 1 }
-        );
-        this.setState({ animatedMonicaImg: true });
-      }
-    }, 50);
+      lastCall = now;
+      return fn(...args);
+    };
   };
 
   componentDidMount() {
-    TweenLite.to(this.jumboTxt, 2, { opacity: 1, delay: 1 });
+    const tHandler = this.throttled(200, this.fadeIn);
     this.aboutIMG = document.getElementsByClassName('about-img').item(0);
     this.monicaIMG = document.getElementsByClassName('monica-img').item(0);
 
+    TweenLite.to(this.jumboTxt, 2, { opacity: 1, delay: 1 });
+
     if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', this.fadeIn);
+      window.addEventListener('scroll', tHandler);
     }
   }
 
