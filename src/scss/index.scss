@@ -141,17 +141,21 @@
   }
 
   .about-mb-img-col {
-    min-height: 600px;
+    min-height: 450px;
+    margin-top: 50px;
 
     @media (min-width: 1200px) {
+      margin-top: 0;
       min-height: 500px;
     }
     .gatsby-image-wrapper {
       height: 100%;
       opacity: 0;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
       img {
-        object-fit: contain !important;
+        object-fit: cover !important;
         font-family: 'object-fit: contain !important; object-position: center center !important;';
       }
     }
@@ -241,9 +245,11 @@
         @media (min-width: 767px) {
           margin-bottom: 50px;
         }
+
         a {
           width: 100%;
           color: black;
+
           @media (min-width: 767px) {
             width: 50%;
           }
@@ -287,6 +293,8 @@
 
   .gatsby-image-wrapper {
     opacity: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     img {
       font-family: 'object-fit: cover !important; object-position: center center !important;';
     }
@@ -295,15 +303,12 @@
   .monica-about {
     text-align: center;
 
-    @media (min-width: 767px) {
-    }
     h2 {
       margin-top: 25px;
       margin-bottom: 25px;
       font-family: 'Playfair Display';
 
       @media (min-width: 767px) {
-        margin-top: 0px;
         margin-bottom: 50px;
       }
     }

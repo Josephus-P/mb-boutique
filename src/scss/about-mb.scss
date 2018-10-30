@@ -3,17 +3,20 @@
   line-height: 2;
   font-family: 'Poppins';
 
-  h1 {
-    font-weight: bold;
-    margin-bottom: 25px;
-    font-family: 'Playfair Display';
-  }
+  .mb-text {
+    opacity: 0;
+    h1 {
+      font-weight: bold;
+      margin-bottom: 25px;
+      font-family: 'Playfair Display';
+    }
 
-  h5 {
-    font-family: 'Poppins';
-    font-size: 1rem;
-  }
-  p {
-    margin-bottom: 50px;
+    h5 {
+      font-family: 'Poppins';
+      font-size: 1rem;
+    }
+    p {
+      margin-bottom: 50px;
+    }
   }
 }
