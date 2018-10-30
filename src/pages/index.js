@@ -26,6 +26,9 @@ export default class HomePage extends Component {
   constructor(props) {
     super(props);
 
+    this.fadeIn = this.fadeIn.bind(this);
+    this.tHandler = this.throttled(200, this.fadeIn);
+
     this.jumboTxt = null;
     this.aboutIMG = null;
     this.aboutMBText = null;
@@ -99,7 +102,7 @@ export default class HomePage extends Component {
 
   throttled = (delay, fn) => {
     let lastCall = 0;
-    return function(...args) {
+    return (...args) => {
       const now = new Date().getTime();
       if (now - lastCall < delay) {
         return;
@@ -110,20 +113,19 @@ export default class HomePage extends Component {
   };
 
   componentDidMount() {
-    const tHandler = this.throttled(200, this.fadeIn);
     this.aboutIMG = document.getElementsByClassName('about-img').item(0);
     this.monicaIMG = document.getElementsByClassName('monica-img').item(0);
 
     TweenLite.to(this.jumboTxt, 2, { opacity: 1, delay: 1 });
 
     if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', tHandler);
+      window.addEventListener('scroll', this.tHandler);
     }
   }
 
   componentWillUnmount() {
     if (typeof window !== 'undefined') {
-      window.removeEventListener('scroll', this.fadeIn);
+      window.removeEventListener('scroll', this.tHandler);
     }
   }
 
