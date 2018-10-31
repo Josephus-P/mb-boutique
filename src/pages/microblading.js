@@ -25,7 +25,7 @@ export default class Microblading extends React.Component {
   componentDidMount() {
     this.aboutTxt = document.getElementsByClassName('mb-text').item(0);
 
-    TweenLite.to(this.aboutTxt, 2, { opacity: 1 });
+    TweenLite.from(this.aboutTxt, 2, { opacity: 0 });
   }
 
   imgModalOff = () => {

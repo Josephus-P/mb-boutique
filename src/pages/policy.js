@@ -16,7 +16,7 @@ export default class Policy extends React.Component {
   componentDidMount() {
     this.policy = document.getElementsByClassName('policy').item(0);
 
-    TweenLite.to(this.policy, 2, { opacity: 1 });
+    TweenLite.from(this.policy, 2, { opacity: 0 });
   }
 
   render() {

@@ -116,7 +116,7 @@ export default class HomePage extends Component {
     this.aboutIMG = document.getElementsByClassName('about-img').item(0);
     this.monicaIMG = document.getElementsByClassName('monica-img').item(0);
 
-    TweenLite.to(this.jumboTxt, 2, { opacity: 1, delay: 0.5 });
+    TweenLite.from(this.jumboTxt, 2, { opacity: 0, delay: 0.5 });
 
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', this.tHandler);
