@@ -5,12 +5,13 @@
     line-height: 2;
 
     .gatsby-image-wrapper {
+      max-height: 600px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
       img {
-        object-fit: contain !important;
-        font-family: 'object-fit: contain !important; object-position: center center !important;';
+        object-fit: cover !important;
+        font-family: 'object-fit: cover !important; object-position: center center !important;';
       }
     }
 

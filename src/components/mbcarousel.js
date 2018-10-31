@@ -15,6 +15,8 @@ export default class MBCarousel extends Component {
         autoPlay={true}
         emulateTouch={true}
         infiniteLoop={true}
+        stopOnHover={false}
+        swipeScrollTolerance={10}
         interval={8000}
       >
         <Container>
@@ -59,6 +61,46 @@ export default class MBCarousel extends Component {
                 for my brow angel, Monica. She seriously saved my life!
               </blockquote>
               <cite>~ Nina</cite>
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row>
+            <Col md="6">
+              <Img fluid={this.props.elsie} />
+            </Col>
+            <Col className="text" md="6">
+              <blockquote>
+                The Embeance of Microblading Boutique is Cozy and Chic. Monica
+                provided service with skill and excellence. I love my brows,
+                this by far has been one of the best investments that I have
+                made. I have and will continue to recommend this establishment
+                to anyone, knowing with confidence that they will be well
+                pleased as I am. Monica I thank and appreciate your service.
+                You're the best!!!!!!!!
+              </blockquote>
+              <cite>~ Elsie</cite>
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row>
+            <Col md="6">
+              <Img fluid={this.props.rosa} />
+            </Col>
+            <Col className="text" md="6">
+              <blockquote>
+                Thanks to Monica, my eyebrows have never looked better! Her
+                attention to detail is impeccable; the color, shape, and hair
+                like strokes are so perfect and natural. I am absolutely in love
+                with them!! The Boutique is so elegant and Monica is amazing!
+                Your appointment is her one on one time with only you; no other
+                clients or distractions. She was great to work with and made
+                sure that I was comfortable throughout the entire procedure. I
+                highly recommend Microblading Boutique to anyone who is looking
+                to have their eyebrows done.
+              </blockquote>
+              <cite>~ Rosa</cite>
             </Col>
           </Row>
         </Container>

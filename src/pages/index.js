@@ -307,6 +307,8 @@ export default class HomePage extends Component {
                 anna={this.props.data.anna.childImageSharp.fluid}
                 kathryn={this.props.data.kathryn.childImageSharp.fluid}
                 nina={this.props.data.nina.childImageSharp.fluid}
+                elsie={this.props.data.elsie.childImageSharp.fluid}
+                rosa={this.props.data.rosa.childImageSharp.fluid}
               />
             </Col>
           </Row>
@@ -344,6 +346,12 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     nina: file(relativePath: { eq: "nina.jpg" }) {
+      ...fluidImage
+    }
+    elsie: file(relativePath: { eq: "elsie.jpg" }) {
+      ...fluidImage
+    }
+    rosa: file(relativePath: { eq: "rosa.jpg" }) {
       ...fluidImage
     }
   }
