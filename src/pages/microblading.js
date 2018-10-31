@@ -4,14 +4,22 @@ import Helmet from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
 import { TweenLite } from 'gsap';
 import MBAccordian from '../components/mbAccordian';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import 'typeface-playfair-display';
-import '../scss/about-mb.scss';
+import '../scss/microblading.scss';
 
 export default class Microblading extends React.Component {
   constructor(props) {
     super(props);
 
     this.aboutTxt = null;
+
+    // Set a default img source so Gatsby Image doesn't complain
+    this.state = {
+      imgModalOn: false,
+      img: this.props.data.ba1_1.childImageSharp.fluid
+    };
   }
 
   componentDidMount() {
@@ -19,6 +27,65 @@ export default class Microblading extends React.Component {
 
     TweenLite.to(this.aboutTxt, 2, { opacity: 1 });
   }
+
+  imgModalOff = () => {
+    this.setState({ imgModalOn: false });
+  };
+
+  displayImgModal = name => {
+    switch (name) {
+      case 'ba1_1':
+        this.setState({
+          img: this.props.data.ba1_1.childImageSharp.fluid,
+          imgModalOn: true
+        });
+        break;
+      case 'ba1_2':
+        this.setState({
+          img: this.props.data.ba1_2.childImageSharp.fluid,
+          imgModalOn: true
+        });
+        break;
+      case 'ba6_1':
+        this.setState({
+          img: this.props.data.ba6_1.childImageSharp.fluid,
+          imgModalOn: true
+        });
+        break;
+      case 'ba6_2':
+        this.setState({
+          img: this.props.data.ba6_2.childImageSharp.fluid,
+          imgModalOn: true
+        });
+        break;
+      case 'ba3_1':
+        this.setState({
+          img: this.props.data.ba3_1.childImageSharp.fluid,
+          imgModalOn: true
+        });
+        break;
+      case 'ba3_2':
+        this.setState({
+          img: this.props.data.ba3_2.childImageSharp.fluid,
+          imgModalOn: true
+        });
+        break;
+      case 'ba5_1':
+        this.setState({
+          img: this.props.data.ba5_1.childImageSharp.fluid,
+          imgModalOn: true
+        });
+        break;
+      case 'ba5_2':
+        this.setState({
+          img: this.props.data.ba5_2.childImageSharp.fluid,
+          imgModalOn: true
+        });
+        break;
+      default:
+        return;
+    }
+  };
 
   render() {
     return (
@@ -30,8 +97,8 @@ export default class Microblading extends React.Component {
             content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
           />
         </Helmet>
-        <Container className="about-mb-page">
-          <Row>
+        <Container>
+          <Row className="about-mb-page">
             <Col className="mb-text" xs="12">
               <h1>What is Microblading?</h1>
               <p>
@@ -62,12 +129,135 @@ export default class Microblading extends React.Component {
                 <br />
               </p>
             </Col>
+            <Col className="img-section" xs="12">
+              <div className="img-group">
+                <p>
+                  <span>Before</span> <span>After</span>
+                </p>
+                <div
+                  className="img-container"
+                  onClick={() => {
+                    this.displayImgModal('ba5_1');
+                  }}
+                >
+                  <Img fluid={this.props.data.ba5_1.childImageSharp.fluid} />
+                </div>
+                <div
+                  className="img-container"
+                  onClick={() => {
+                    this.displayImgModal('ba5_2');
+                  }}
+                >
+                  <Img fluid={this.props.data.ba5_2.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="img-group">
+                <p>
+                  <span>Before</span> <span>After</span>
+                </p>
+                <div
+                  className="img-container"
+                  onClick={() => {
+                    this.displayImgModal('ba6_1');
+                  }}
+                >
+                  <Img fluid={this.props.data.ba6_1.childImageSharp.fluid} />
+                </div>
+                <div
+                  className="img-container"
+                  onClick={() => {
+                    this.displayImgModal('ba6_2');
+                  }}
+                >
+                  <Img fluid={this.props.data.ba6_2.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="img-group">
+                <p>
+                  <span>Before</span> <span>After</span>
+                </p>
+                <div
+                  className="img-container"
+                  onClick={() => {
+                    this.displayImgModal('ba3_1');
+                  }}
+                >
+                  <Img fluid={this.props.data.ba3_1.childImageSharp.fluid} />
+                </div>
+                <div
+                  className="img-container"
+                  onClick={() => {
+                    this.displayImgModal('ba3_2');
+                  }}
+                >
+                  <Img fluid={this.props.data.ba3_2.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="img-group">
+                <p>
+                  <span>Before</span> <span>After</span>
+                </p>
+                <div
+                  className="img-container"
+                  onClick={() => {
+                    this.displayImgModal('ba1_1');
+                  }}
+                >
+                  <Img fluid={this.props.data.ba1_1.childImageSharp.fluid} />
+                </div>
+                <div
+                  className="img-container"
+                  onClick={() => {
+                    this.displayImgModal('ba1_2');
+                  }}
+                >
+                  <Img fluid={this.props.data.ba1_2.childImageSharp.fluid} />
+                </div>
+              </div>
+            </Col>
             <Col xs="12">
               <MBAccordian />
             </Col>
           </Row>
         </Container>
+        <div
+          style={{ display: this.state.imgModalOn ? 'block' : 'none' }}
+          onClick={this.imgModalOff}
+          className="modal"
+        >
+          <span />
+          <Img fluid={this.state.img} />
+        </div>
       </Layout>
     );
   }
 }
+
+export const mbQuery = graphql`
+  query {
+    ba1_1: file(relativePath: { eq: "ba1_1.jpg" }) {
+      ...fluidImage
+    }
+    ba1_2: file(relativePath: { eq: "ba1_2.jpg" }) {
+      ...fluidImage
+    }
+    ba6_1: file(relativePath: { eq: "ba6_1.jpg" }) {
+      ...fluidImage
+    }
+    ba6_2: file(relativePath: { eq: "ba6_2.jpg" }) {
+      ...fluidImage
+    }
+    ba3_1: file(relativePath: { eq: "ba3_1.jpg" }) {
+      ...fluidImage
+    }
+    ba3_2: file(relativePath: { eq: "ba3_2.jpg" }) {
+      ...fluidImage
+    }
+    ba5_1: file(relativePath: { eq: "ba5_1.jpg" }) {
+      ...fluidImage
+    }
+    ba5_2: file(relativePath: { eq: "ba5_2.jpg" }) {
+      ...fluidImage
+    }
+  }
+`;
