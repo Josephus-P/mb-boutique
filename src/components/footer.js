@@ -47,8 +47,7 @@ export default class Footer extends React.Component {
             <Col xs="12">
               <p>
                 Copyright &copy;
-                {this.state.year} All rights reserved | Website designed and
-                built by{' '}
+                {this.state.year} All rights reserved | Website built by{' '}
                 <a href="https://www.josephusdev.com" rel="noopener">
                   Josue Peralta
                 </a>

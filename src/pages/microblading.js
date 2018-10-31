@@ -116,12 +116,11 @@ export default class Microblading extends React.Component {
                 with sterile packaged blades. The blade glides with gentle
                 pressure over the skin and causes fine cuts, leaving a trace
                 that can hardly be distinguished from real hair. Depending on
-                the drawing technique – of which we are experts – it creates an
-                individual look perfect for your face and the style you are
-                trying to achieve. Best of all, 3D or HD eyebrows absolutely do
-                not appear as a tattoo. Microblading is ideal for anyone wanting
-                to enhance the look of their eyebrows. The results are natural
-                looking hair-like strokes, regardless of the amount of hair you
+                the drawing technique it creates an individual look perfect for
+                your face. Best of all, 3D or HD eyebrows absolutely do not
+                appear as a tattoo! Microblading is ideal for anyone wanting to
+                enhance the look of their eyebrows. The results are natural
+                looking, hair-like strokes regardless of the amount of hair you
                 currently have. People suffering from alopecia, trigonometrical
                 or any other condition that causes hair loss benefit greatly
                 from Microblading, as well as people who simply aren’t happy

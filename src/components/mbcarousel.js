@@ -71,7 +71,7 @@ export default class MBCarousel extends Component {
             </Col>
             <Col className="text" md="6">
               <blockquote>
-                The Embeance of Microblading Boutique is Cozy and Chic. Monica
+                The Ambiance of Microblading Boutique is Cozy and Chic. Monica
                 provided service with skill and excellence. I love my brows,
                 this by far has been one of the best investments that I have
                 made. I have and will continue to recommend this establishment

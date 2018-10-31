@@ -6,7 +6,6 @@ import {
   AccordionItemBody
 } from 'react-accessible-accordion';
 
-// Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
 
 const MBAccordian = () => (
@@ -57,12 +56,12 @@ const MBAccordian = () => (
       <AccordionItemBody>
         <p>
           If you want to effortlessly look your best anytime, then microblading
-          is for you! If you want to look younger healthier, and more vibrant
+          is for you! If you want to look younger healthier and more vibrant,
           permanent makeup does wonders! If you’re a busy mom, business woman or
           have an active lifestyle you’ll save hours every week not having to
           stand in front of the mirror slaving over applying makeup. Not to
-          mention, you won’t have to worry about sweating it off during a
-          workout or melting by the end of an evening out.
+          mention you won’t have to worry about sweating it off during a workout
+          or melting by the end of an evening out.
         </p>
       </AccordionItemBody>
     </AccordionItem>
@@ -79,14 +78,14 @@ const MBAccordian = () => (
           applied for numbing during the procedure to alleviate discomfort.
           Every effort is made to ensure you remain comfortable for the duration
           of the procedure. Clients are usually pleased to discover that it is
-          no more painful than having your eyebrows tweezed or threaded. PLEASE
-          NOTE: Having this service performed during your menstrual cycle may
-          increase discomfort during your procedure. * If you are a frequent
-          smoker, the topical anesthetics used during the treatment will not
-          last as long. * If you have been diagnosed with Fibromyalgia, be aware
-          that this may affect your sensitivity tolerance to the procedure. We
-          ask that you arrive 15 min earlier prior to appointment time to go
-          over Health screening.
+          no more painful than having your eyebrows tweezed or threaded.{' '}
+          <strong>PLEASE NOTE:</strong> Having this service performed during
+          your menstrual cycle may increase discomfort during your procedure. If
+          you are a frequent smoker, the topical anesthetics used during the
+          treatment will not last as long. If you have been diagnosed with
+          Fibromyalgia, be aware that this may affect your sensitivity tolerance
+          to the procedure. We ask that you arrive 15 min prior to appointment
+          time to go over Health screening.
         </p>
       </AccordionItemBody>
     </AccordionItem>
@@ -138,8 +137,8 @@ const MBAccordian = () => (
         <p>
           Microblading is a permanent makeup applied to the skin. The pigment
           will fade over time and we recommend to get a touch up annually to
-          keep them looking their best.. There is no guarantee in how long it
-          lasts as each individuals skin will respond differently. Frequency of
+          keep them looking their best. There is no guarantee in how long it
+          lasts as each individual's skin will respond differently. Frequency of
           touch-ups depends on a number of factors including: skin type, pigment
           selection, lifestyle (sun exposure), iron deficiency (your body
           absorbs iron-oxide as a supplement), chemical peels, etc. Please note
@@ -159,8 +158,8 @@ const MBAccordian = () => (
       </AccordionItemTitle>
       <AccordionItemBody>
         <p>
-          For microblading, at least two appointments are needed initially, at
-          least 6-8 weeks apart. At the second treatment, we will assess the
+          For microblading, at least two appointments are needed initially at
+          least 6-8 weeks apart. At the second treatment we will assess the
           color retention and make adjustments as necessary. Everyone heals
           differently and at different rates.
         </p>
@@ -175,17 +174,20 @@ const MBAccordian = () => (
       </AccordionItemTitle>
       <AccordionItemBody>
         <p>
-          Sun exposure: The sun will extremely soften the look of your pigment,
-          so a physical sunscreen should be used (once healed) to prolong your
-          enhancement. The regeneration of skin cells: The longer the
-          regeneration takes, the longer the pigment holds. The speed at which
-          the skin absorbs the pigment: The slower the absorption, the longer
-          the pigment will hold. The choice of pigment color: Some colors may
-          fade quicker than others, e.g. a blonde pigment may fade quicker than
-          a dark brunette pigment. Bleeding during the procedure: Any bleeding
-          during the tattooing procedure will reduce the amount of pigment
-          absorption. Caffeine, alcohol, and certain medications act as
-          blood-thinners and should avoided 48 hours prior to your appointment.
+          <strong>Sun exposure:</strong> The sun will extremely soften the look
+          of your pigment, so a physical sunscreen should be used (once healed)
+          to prolong your enhancement.{' '}
+          <strong>The regeneration of skin cells:</strong> The longer the
+          regeneration takes, the longer the pigment holds.{' '}
+          <strong>The speed at which the skin absorbs the pigment:</strong> The
+          slower the absorption, the longer the pigment will hold.{' '}
+          <strong>The choice of pigment color:</strong> Some colors may fade
+          quicker than others, e.g. a blonde pigment may fade quicker than a
+          dark brunette pigment. <strong>Bleeding during the procedure:</strong>{' '}
+          Any bleeding during the tattooing procedure will reduce the amount of
+          pigment absorption. Caffeine, alcohol and certain medications act as
+          blood-thinners and should be avoided 48 hours prior to your
+          appointment.
         </p>
       </AccordionItemBody>
     </AccordionItem>
@@ -198,7 +200,7 @@ const MBAccordian = () => (
       </AccordionItemTitle>
       <AccordionItemBody>
         <p>
-          If you have an ideal shape and color in mind, please bring a couple
+          If you have an ideal shape and color in mind, please bring a couple of
           reference photos with you to your appointment. You may fill in your
           eyebrows as you normally would so we may take into consideration the
           shape you feel most comfortable with. If you regularly get your
@@ -235,7 +237,7 @@ const MBAccordian = () => (
           Your brows will appear darker and more intense than expected for the
           first week or so. This will gradually lighten during the complete
           healing process. Redness and swelling is minimal. Please view our
-          detailed Before & Aftercare Instructions.
+          detailed Before &amp; Aftercare Instructions.
         </p>
       </AccordionItemBody>
     </AccordionItem>
@@ -248,10 +250,10 @@ const MBAccordian = () => (
       </AccordionItemTitle>
       <AccordionItemBody>
         <p>
-          Please review our detailed Pre & Post Care Instructions. It is highly
-          beneficial to follow these instructions to ensure a comfortable
+          Please review our detailed Pre &amp; Post Care Instructions. It is
+          highly beneficial to follow these instructions to ensure a comfortable
           healing process and to achieve the best possible results. DO NOT rub
-          or pick the healing area as the color will peel off prematurely, and
+          or pick the healing area as the color will peel off prematurely and
           avoid extreme heat, sweating, and contaminated bodies of water (such
           as saunas, hot tubs, steam rooms, pools, lakes, and places with hot
           humidity, etc.).
@@ -270,11 +272,11 @@ const MBAccordian = () => (
           The color will lighten over time. We recommend an annual touch up to
           keep brows looking their best. Fading greatly depends on your skin
           type, lifestyle, sun exposure, pigment color used, broken capillaries,
-          iron deficiency, and if any chemical peels were done after your
-          procedure. * If you are planning a chemical peel, MRI or other medical
+          iron deficiency and if any chemical peels were done after your
+          procedure. If you are planning a chemical peel, MRI or other medical
           procedure, please inform the technician that you have had an
           iron-oxide cosmetic procedure . Careful application must be taken to
-          avoid affecting the microbladed area. * If you are planning to have
+          avoid affecting the microbladed area. If you are planning to have
           laser treatments, tell your laser specialist to avoid the pigmented
           area. Laser may cause pigment to turn black.
         </p>
