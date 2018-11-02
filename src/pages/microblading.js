@@ -97,6 +97,10 @@ export default class Microblading extends React.Component {
             content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
           />
           <meta
+            property="og:title"
+            content="What is Microblading? | Microblading Boutique"
+          />
+          <meta
             property="og:url"
             content="https://www.browsbymonica.com/microblading"
           />
@@ -105,7 +109,7 @@ export default class Microblading extends React.Component {
             property="og:description"
             content="Microblading is a relatively new method for enhancing eyebrows. It is considered to be permanent makeup and is done using a very fine blade to deposit pigment into the epidermis."
           />
-          <meta property="og:image" content="/imags/ba6_2.jpg" />
+          <meta property="og:image" content="/images/ba6_2.jpg" />
         </Helmet>
         <Container>
           <Row className="about-mb-page">

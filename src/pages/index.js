@@ -148,7 +148,7 @@ export default class HomePage extends Component {
             property="og:description"
             content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
           />
-          <meta property="og:image" content="/imags/eyebrows-sm.jpg" />
+          <meta property="og:image" content="/images/eyebrows-sm.jpg" />
         </Helmet>
         <Jumbotron fluid>
           <Container>
