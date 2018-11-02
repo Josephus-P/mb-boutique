@@ -22,7 +22,7 @@ export default class Policy extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title="Our Policy | Microblading Boutique">
+        <Helmet title="Microblading Policy | Microblading Boutique">
           <html lang="en" />
           <meta
             name="description"

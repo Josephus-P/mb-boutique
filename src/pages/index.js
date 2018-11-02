@@ -138,6 +138,17 @@ export default class HomePage extends Component {
             name="description"
             content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
           />
+          <meta
+            property="og:title"
+            content="Get the brows you've always wanted. Book now with Monica!"
+          />
+          <meta property="og:url" content="https://www.browsbymonica.com" />
+          <meta property="og:type" content="business" />
+          <meta
+            property="og:description"
+            content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
+          />
+          <meta property="og:image" content="/imags/eyebrows-sm.jpg" />
         </Helmet>
         <Jumbotron fluid>
           <Container>

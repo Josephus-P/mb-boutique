@@ -96,23 +96,33 @@ export default class Microblading extends React.Component {
             name="description"
             content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
           />
+          <meta
+            property="og:url"
+            content="https://www.browsbymonica.com/microblading"
+          />
+          <meta property="og:type" content="article" />
+          <meta
+            property="og:description"
+            content="Microblading is a relatively new method for enhancing eyebrows. It is considered to be permanent makeup and is done using a very fine blade to deposit pigment into the epidermis."
+          />
+          <meta property="og:image" content="/imags/ba6_2.jpg" />
         </Helmet>
         <Container>
           <Row className="about-mb-page">
             <Col className="mb-text" xs="12">
               <h1>What is Microblading?</h1>
               <p>
-                Microblading - Also known as eyebrow embroidery or 3D brows, is
-                a relatively new method for enhancing eyebrows. It is considered
-                to be permanent makeup. It is done using a very fine blade to
+                Microblading, also known as eyebrow embroidery or 3D brows, is a
+                relatively new method for enhancing eyebrows. It is considered
+                to be permanent makeup and is done using a very fine blade to
                 deposit pigment into the epidermis. Because the color is closer
                 to the surface, the strokes appear crisp and very fine. There is
                 no spilling under the skin.
                 <br />
                 <br />
                 The difference with this and ordinary permanent makeup is that
-                Microblading is not done by a machine. The pigment is manually
-                placed into the skin. The Microblading manual pen is equipped
+                microblading is not done by a machine. The pigment is manually
+                placed into the skin. The microblading manual pen is equipped
                 with sterile packaged blades. The blade glides with gentle
                 pressure over the skin and causes fine cuts, leaving a trace
                 that can hardly be distinguished from real hair. Depending on
