@@ -109,7 +109,10 @@ export default class Microblading extends React.Component {
             property="og:description"
             content="Microblading is a relatively new method for enhancing eyebrows. It is considered to be permanent makeup and is done using a very fine blade to deposit pigment into the epidermis."
           />
-          <meta property="og:image" content="/images/ba6_2.jpg" />
+          <meta
+            property="og:image"
+            content="https://sad-elion-4482d1.netlify.com/static/ba6_2-37ab1086dfb5f33bcc5f395eff4dcad0-75c44.jpg"
+          />
         </Helmet>
         <Container>
           <Row className="about-mb-page">

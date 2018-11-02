@@ -143,12 +143,15 @@ export default class HomePage extends Component {
             content="Get the brows you've always wanted. Book now with Monica!"
           />
           <meta property="og:url" content="https://www.browsbymonica.com" />
-          <meta property="og:type" content="business" />
+          <meta property="og:type" content="company" />
           <meta
             property="og:description"
             content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
           />
-          <meta property="og:image" content="/images/eyebrows-sm.jpg" />
+          <meta
+            property="og:image"
+            content="https://sad-elion-4482d1.netlify.com/static/eyes-sm-f8edf25cd33544614047e21be071e187.jpg"
+          />
         </Helmet>
         <Jumbotron fluid>
           <Container>
