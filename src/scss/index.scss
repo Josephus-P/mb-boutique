@@ -167,6 +167,10 @@
 .shop-info-fluid {
   font-family: 'Poppins';
   background-color: #f8f9fa;
+  background: url(../images/beautybg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 
   h2 {
     text-align: center;
@@ -214,6 +218,9 @@
     }
 
     .gatsby-image-wrapper {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
       img {
         font-family: 'object-fit: cover !important; object-position: center center !important;';
       }

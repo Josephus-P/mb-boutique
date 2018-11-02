@@ -143,7 +143,7 @@ export default class HomePage extends Component {
             content="Get the brows you've always wanted. Book now with Monica!"
           />
           <meta property="og:url" content="https://www.browsbymonica.com" />
-          <meta property="og:type" content="company" />
+          <meta property="og:type" content="website" />
           <meta
             property="og:description"
             content="Beautiful eyebrows done by an expert. Book your appointment online now for a professional microblading session in the Chicagoland area."
@@ -231,7 +231,7 @@ export default class HomePage extends Component {
                 </Card>
               </Col>
               <Col className="info-img-col my-auto" xs="12" md="4">
-                <Img fluid={this.props.data.storefront.childImageSharp.fluid} />
+                <Img fluid={this.props.data.mbImage.childImageSharp.fluid} />
               </Col>
               <Col className="info-btn-col" xs="12" md="4">
                 <Card>
@@ -347,7 +347,7 @@ export const pageQuery = graphql`
     mbHome: file(relativePath: { eq: "eyebrows_home.jpg" }) {
       ...fluidImage
     }
-    storefront: file(relativePath: { eq: "salon.jpg" }) {
+    mbImage: file(relativePath: { eq: "image4.jpg" }) {
       ...fluidImage
     }
     monica: file(relativePath: { eq: "monica.jpg" }) {
