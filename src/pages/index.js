@@ -56,14 +56,14 @@ export default class HomePage extends Component {
     this.rectMonica = this.monicaText.getBoundingClientRect();
     this.rectMonicaIMG = this.monicaIMG.getBoundingClientRect();
     this.rectAboutIMG = this.aboutIMG.getBoundingClientRect();
-
+    /*
     if (
       this.state.animatedAboutTxt === false &&
       wHeight > this.rectAbout.top + this.rectAbout.height / 2
     ) {
       TweenLite.to(this.aboutMBText, 2, { opacity: 1 });
       this.setState({ animatedAboutTxt: true });
-    }
+    }*/
 
     if (
       this.state.animatedAboutImg === false &&
