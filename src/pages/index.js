@@ -231,7 +231,7 @@ export default class HomePage extends Component {
                 </Card>
               </Col>
               <Col className="info-img-col my-auto" xs="12" md="4">
-                <Img fluid={this.props.data.mbImage.childImageSharp.fluid} />
+                <Img fluid={this.props.data.mbSalon.childImageSharp.fluid} />
               </Col>
               <Col className="info-btn-col" xs="12" md="4">
                 <Card>
@@ -347,7 +347,7 @@ export const pageQuery = graphql`
     mbHome: file(relativePath: { eq: "eyebrows_home.jpg" }) {
       ...fluidImage
     }
-    mbImage: file(relativePath: { eq: "image4.jpg" }) {
+    mbSalon: file(relativePath: { eq: "mbsalon.jpg" }) {
       ...fluidImage
     }
     monica: file(relativePath: { eq: "monica.jpg" }) {
