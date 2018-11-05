@@ -214,7 +214,7 @@ export default class HomePage extends Component {
                     </span>
                     <address>
                       <a href="https://goo.gl/maps/W24CMHiKQYS2" rel="noopener">
-                        4550 W 95th St.
+                        4540 W 95th St.
                         <br /> Oak Lawn, IL 60453
                       </a>
                     </address>
