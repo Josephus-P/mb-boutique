@@ -1,8 +1,3 @@
-<p align="center">
-  <a href="https://www.browsbymonica.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
   Microblading Boutique LLC
 </h1>
