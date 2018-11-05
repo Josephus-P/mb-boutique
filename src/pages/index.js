@@ -31,17 +31,17 @@ export default class HomePage extends Component {
 
     this.jumboTxt = null;
     this.aboutIMG = null;
-    this.aboutMBText = null;
+    //this.aboutMBText = null;
     this.monicaIMG = null;
     this.monicaText = null;
 
-    this.rectAbout = null;
+    //this.rectAbout = null;
     this.rectMonica = null;
     this.rectMonicaIMG = null;
     this.rectAboutIMG = null;
 
     this.state = {
-      animatedAboutTxt: false,
+      //  animatedAboutTxt: false,
       animatedAboutImg: false,
       animatedMonicaImg: false,
       animatedMonicaTxt: false
@@ -52,7 +52,7 @@ export default class HomePage extends Component {
     //console.log('fade check');
 
     let wHeight = window.innerHeight;
-    this.rectAbout = this.aboutMBText.getBoundingClientRect();
+    //this.rectAbout = this.aboutMBText.getBoundingClientRect();
     this.rectMonica = this.monicaText.getBoundingClientRect();
     this.rectMonicaIMG = this.monicaIMG.getBoundingClientRect();
     this.rectAboutIMG = this.aboutIMG.getBoundingClientRect();
@@ -69,12 +69,7 @@ export default class HomePage extends Component {
       this.state.animatedAboutImg === false &&
       wHeight > this.rectAboutIMG.top + this.rectAboutIMG.height / 2
     ) {
-      TweenLite.fromTo(
-        this.aboutIMG,
-        1,
-        { left: 100 },
-        { left: 0, opacity: 1 }
-      );
+      TweenLite.to(this.aboutIMG, 1, { opacity: 1 });
       this.setState({ animatedAboutImg: true });
     }
 
