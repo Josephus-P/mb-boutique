@@ -10,6 +10,14 @@ module.exports = {
         name: 'images'
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-128772733-1',
+        head: true,
+        siteSpeedSampleRate: 10
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
