@@ -1,7 +1,7 @@
 /********** JUMBOTRON SECTION **********/
 .jumbotron-fluid {
   margin-top: 25px;
-  padding: 0;
+  padding: 0 0 25px 0;
   background: url(../images/eyes-sm.jpg);
   background-size: 600px;
   background-position-y: 20px;
@@ -20,6 +20,7 @@
     background: url(../images/eyes.jpg);
     background-size: cover;
     min-height: 50vh;
+    padding: 0;
   }
 
   .jumbo-row {
