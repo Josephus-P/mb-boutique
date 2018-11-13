@@ -27,13 +27,14 @@ module.exports = {
         name: 'Microblading Boutique',
         short_name: 'MB Boutique',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#00ad9f99',
+        theme_color: '#00ad9f99',
         display: 'minimal-ui',
         icon: 'src/images/icon.png'
       }
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    'gatsby-plugin-netlify'
   ]
 };
