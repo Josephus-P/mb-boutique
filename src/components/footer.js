@@ -48,7 +48,11 @@ export default class Footer extends React.Component {
               <p>
                 Copyright &copy;
                 {this.state.year} All rights reserved | Website built by{' '}
-                <a href="https://www.josephusdev.com" rel="noopener">
+                <a
+                  href="https://www.linkedin.com/in/josueperalta"
+                  target="_blank"
+                  rel="noopener"
+                >
                   Josue Peralta
                 </a>
               </p>
