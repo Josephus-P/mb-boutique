@@ -53,7 +53,7 @@ export default class Footer extends React.Component {
                   target="_blank"
                   rel="noopener"
                 >
-                  Josue Peralta
+                  Josue P.
                 </a>
               </p>
             </Col>
