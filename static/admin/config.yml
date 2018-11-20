@@ -2,19 +2,23 @@ backend:
   name: gitlab
   repo: mb-boutique/mb-boutique
   auth_type: implicit
-  app_id: 437513145ee40d13ecf11a00025a794e4d6ed13838723c2f8242627cdb167915
 
 media_folder: static/images
 public_folder: images
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/promo/index.md"
-        label: "Promotions"
-        name: "promotions"
+      - file: 'src/pages/promo/index.md'
+        label: 'Promotions'
+        name: 'promotions'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "promo-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "markdown"}
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'promo-page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'markdown' }
