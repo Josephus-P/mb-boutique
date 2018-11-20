@@ -1,8 +1,6 @@
 backend:
-  name: gitlab
-  repo: mb-boutique/mb-boutique
-  auth_type: implicit
-  app_id: 437513145ee40d13ecf11a00025a794e4d6ed13838723c2f8242627cdb167915
+  name: git-gateway
+  branch: master
 
 media_folder: static/images
 public_folder: images
