@@ -11,6 +11,14 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages'
+      }
+    },
+    'gatsby-transformer-remark',
+    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-128772733-1',
@@ -35,6 +43,7 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-sass',
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify'
   ]
 };
