@@ -19,7 +19,6 @@ import MBCarousel from '../components/mbcarousel';
 import { TweenLite } from 'gsap';
 import 'typeface-playfair-display';
 import 'typeface-poppins';
-import 'typeface-milonga';
 import '../scss/index.scss';
 
 export default class HomePage extends Component {
@@ -200,7 +199,12 @@ export default class HomePage extends Component {
         <Container className="shop-info-fluid" fluid>
           <Container className="shop-info">
             <Row>
-              <Col className="info-col" xs="12" md="4">
+              <Col
+                className="info-col offset-md-2 offset-xl-0"
+                xs="12"
+                md="8"
+                xl="4"
+              >
                 <Card>
                   <CardHeader>
                     <h2>Salon Info</h2>
@@ -225,10 +229,20 @@ export default class HomePage extends Component {
                   </CardBody>
                 </Card>
               </Col>
-              <Col className="info-img-col my-auto" xs="12" md="4">
+              <Col
+                className="info-img-col my-auto offset-md-2 offset-xl-0"
+                xs="12"
+                md="8"
+                xl="4"
+              >
                 <Img fluid={this.props.data.mbSalon.childImageSharp.fluid} />
               </Col>
-              <Col className="info-btn-col" xs="12" md="4">
+              <Col
+                className="info-btn-col offset-md-2 offset-xl-0"
+                xs="12"
+                md="8"
+                xl="4"
+              >
                 <Card>
                   <CardHeader>
                     <h2>Find Us On</h2>
@@ -274,13 +288,18 @@ export default class HomePage extends Component {
         <Container className="meet-monica" fluid>
           <Container>
             <Row>
-              <Col xs="12" xl="6">
+              <Col className="offset-md-2 offset-xl-0" xs="12" md="8" xl="6">
                 <Img
                   className="monica-img"
                   fluid={this.props.data.monica.childImageSharp.fluid}
                 />
               </Col>
-              <Col className="monica-about" xs="12" xl="6">
+              <Col
+                className="monica-about offset-md-1 offset-xl-0"
+                xs="12"
+                md="10"
+                xl="6"
+              >
                 <h2>Meet Monica</h2>
                 <p ref={p => (this.monicaText = p)}>
                   With over 15 years of experience as a beauty and skin expert,
