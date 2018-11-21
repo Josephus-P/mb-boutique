@@ -14,10 +14,10 @@ collections:
         name: 'promotions'
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
+              label: 'Path',
+              name: 'path',
               widget: 'hidden',
-              default: 'promo-page',
+              default: 'promotions',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'markdown' }
