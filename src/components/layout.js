@@ -5,7 +5,6 @@ import Footer from './footer';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'typeface-playfair-display';
 import 'typeface-poppins';
-import 'typeface-milonga';
 import './layout.scss';
 
 const Layout = ({ children }) => (
