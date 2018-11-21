@@ -1,6 +1,6 @@
 ---
 path: /promotions
 title: 'Promotions'
-image: ''
+image: 'eyes-sm.jpg'
 description: ''
 ---

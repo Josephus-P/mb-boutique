@@ -13,8 +13,8 @@ export const PromoPageTemplate = ({ title, description, content, image }) => {
         <Row>
           <Col xs="12">
             <h1>{title}</h1>
+            <img className="img-fluid" src={image} alt="promotion" />
             <p>{description}</p>
-            <img src={image} alt="promotion" />
             <div dangerouslySetInnerHTML={{ __html: content }} />
           </Col>
         </Row>
