@@ -30,6 +30,7 @@ const PromoPage = ({ data }) => {
   return (
     <PromoPageTemplate
       title={frontmatter.title}
+      image={frontmatter.image}
       description={frontmatter.description}
       content={html}
     />
@@ -44,6 +45,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         description
+        image
         path
         title
       }
