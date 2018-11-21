@@ -47,6 +47,13 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: { modulePath: `${__dirname}/src/cms/cms.js` }
     },
-    'gatsby-plugin-netlify'
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          '/sw.js': ['Cache-Control: no-cache']
+        }
+      }
+    }
   ]
 };
