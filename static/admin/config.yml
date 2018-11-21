@@ -20,4 +20,5 @@ collections:
               default: '/promotions',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: Image, name: image, widget: image }
           - { label: 'Description', name: 'description', widget: 'markdown' }

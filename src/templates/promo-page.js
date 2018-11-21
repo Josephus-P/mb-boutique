@@ -6,7 +6,7 @@ import '../scss/promo.scss';
 import 'typeface-playfair-display';
 import 'typeface-poppins';
 
-export const PromoPageTemplate = ({ title, description, content }) => {
+export const PromoPageTemplate = ({ title, description, content, image }) => {
   return (
     <Layout>
       <Container className="promo-page-container">
@@ -14,10 +14,8 @@ export const PromoPageTemplate = ({ title, description, content }) => {
           <Col xs="12">
             <h1>{title}</h1>
             <p>{description}</p>
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
+            <img src={image} alt="promotion image" />
+            <div dangerouslySetInnerHTML={{ __html: content }} />
           </Col>
         </Row>
       </Container>
