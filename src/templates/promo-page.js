@@ -20,7 +20,7 @@ export const PromoPageTemplate = ({ title, description, content, image }) => {
         <meta property="og:description" content={`${description}`} />
         <meta
           property="og:image"
-          content={`https://browsbymonica.com/static${image}`}
+          content={`https://browsbymonica.com${image}`}
         />
       </Helmet>
       <Container className="promo-page-container">
